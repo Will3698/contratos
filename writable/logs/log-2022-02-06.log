@@ -1,0 +1,63 @@
+CRITICAL - 2022-02-06 12:19:50 --> Undefined variable $dados
+#0 C:\xampp2\htdocs\contratos\app\Views\cadastrar_contrato_view.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp2\\htdoc...', 56)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('cadastrar_contr...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(20): view('cadastrar_contr...')
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->listar_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-06 12:51:01 --> Undefined variable $listagem
+#0 C:\xampp2\htdocs\contratos\app\Views\listar_contrato_view.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp2\\htdoc...', 63)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('listar_contrato...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(20): view('listar_contrato...')
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->listar_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-06 12:52:21 --> Undefined variable $listagem
+#0 C:\xampp2\htdocs\contratos\app\Views\listar_contrato_view.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp2\\htdoc...', 63)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('listar_contrato...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(21): view('listar_contrato...')
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->listar_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-06 12:52:34 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp2\htdocs\contratos\app\Views\listar_contrato_view.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 63)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('listar_contrato...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(21): view('listar_contrato...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->listar_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-06 12:55:14 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp2\htdocs\contratos\app\Views\listar_contrato_view.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 63)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('listar_contrato...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(23): view('listar_contrato...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->listar_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-06 13:33:53 --> file_get_contents(http://localhost:8080/api/contrato): Failed to open stream: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 16)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(16): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->listar_contrato()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
