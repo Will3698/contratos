@@ -78,7 +78,7 @@
                             <label>Tipo de Serviço</label>
                             <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="tipo_servico">
                                 <option selected>Escolher...</option>
-                                <option value="Mantenção">Manutenção</option>
+                                <option value="Manutenção">Manutenção</option>
                                 <option value="Serviço">Serviço</option>
                                 <option value="Insumos">Insumos</option>
                             </select>

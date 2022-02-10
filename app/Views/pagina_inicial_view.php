@@ -16,7 +16,7 @@
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
             <div class="border-end bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light">Contratos</div>
+                <div class="sidebar-heading border-bottom bg-light"><b>CONTRATOS</b></div>
                 <div class="list-group list-group-flush">
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="<?= site_url("contratocontroller/cadastrar_contrato") ?>">Cadastrar Contrato</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="<?= site_url("contratocontroller/listar_contrato") ?>">Listar Contratos</a>
