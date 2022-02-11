@@ -66,10 +66,11 @@
                     <?php foreach ($listagem as $inf) : ?>
                         <tbody>
                             <tr>
+                                <input type="hidden" name="id" value="<?= $inf['id'] ?>">
                                 <td><?php print $inf["cod_contrato"] ?></td>
                                 <td><?php print $inf["cnpj"] ?></td>
                                 <td><?php print $inf["nome"] ?></td>
-                                <td><a class="btn btn-outline-primary" href="<?= site_url("contratocontroller/detalhe_contrato/?cod={$inf["cod_contrato"]}") ?>">Visualizar</a></td>
+                                <td><a class="btn btn-outline-primary" href="<?= site_url("contratocontroller/detalhe_contrato/?id={$inf["id"]}") ?>">Visualizar</a></td>
                             </tr>
                         </tbody>
                     <?php endforeach; ?>

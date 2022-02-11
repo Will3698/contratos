@@ -54,131 +54,139 @@
             <!-- Page content-->
             <div class="container-fluid">
                 <br>
-                <?php foreach ($cont as $inf) : ?>
-                    <?php if ($_GET['cod'] == $inf['cod_contrato']) { ?>
-                        <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">Cod. Contrato</label>
-                            <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['cod_contrato'] ?>" class="form-control" id="colFormLabel">
+                <form action="<?= site_url("contratocontroller/atualizar_contrato") ?>" method="POST" enctype="multipart/form-data">
+                    <?php foreach ($cont as $inf) : ?>
+                        <?php if ($_GET['id'] == $inf['id']) { ?>
+                            <input type="hidden" name="id" value="<?= $inf['id'] ?>">
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">Cod. Contrato</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="cod_contrato" value="<?= $inf['cod_contrato'] ?>" class="form-control" id="colFormLabel">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">Nome/Razão Social</label>
-                            <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['nome'] ?>" class="form-control" id="colFormLabel">
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">Nome/Razão Social</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="nome" value="<?= $inf['nome'] ?>" class="form-control" id="colFormLabel">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">CNPJ</label>
-                            <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['cnpj'] ?>" class="form-control" id="colFormLabel">
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">CNPJ</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="cnpj" value="<?= $inf['cnpj'] ?>" class="form-control" id="colFormLabel">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">Tipo de Serviço</label>
-                            <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['tipo_servico'] ?>" class="form-control" id="colFormLabel">
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">Responsável</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="responsavel" value="<?= $inf['responsavel'] ?>" class="form-control" id="colFormLabel">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">Situação</label>
-                            <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['situacao'] ?>" class="form-control" id="colFormLabel">
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">Tipo de Serviço</label>
+                                <div class="col-sm-5">
+                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="tipo_servico">
+                                        <option selected><?= $inf['tipo_servico'] ?></option>
+                                        <option value="Manutenção">Manutenção</option>
+                                        <option value="Serviço">Serviço</option>
+                                        <option value="Insumos">Insumos</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">SLA</label>
-                            <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['sla'] ?>" class="form-control" id="colFormLabel">
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">Situação</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="situacao" value="<?= $inf['situacao'] ?>" class="form-control" id="colFormLabel">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">Tipo de Contrato</label>
-                            <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['tipo_contrato'] ?>" class="form-control" id="colFormLabel">
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">SLA</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="sla" value="<?= $inf['sla'] ?>" class="form-control" id="colFormLabel">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">Data da Assinatura</label>
-                            <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['data_assinatura'] ?>" class="form-control" id="colFormLabel">
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">Tipo de Contrato</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="tipo_contrato" value="<?= $inf['tipo_contrato'] ?>" class="form-control" id="colFormLabel">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">Data de Cadastro</label>
-                            <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['data_cadastro'] ?>" class="form-control" id="colFormLabel">
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">Data da Assinatura</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="data_assinatura" value="<?= $inf['data_assinatura'] ?>" class="form-control" id="colFormLabel">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">Tipo de Serviço</label>
-                            <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['tipo_servico'] ?>" class="form-control" id="colFormLabel">
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">Data de Cadastro</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="data_cadastro" value="<?= $inf['data_cadastro'] ?>" class="form-control" id="colFormLabel">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">Data de Venc. da Fatura</label>
-                            <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['data_venc_fatura'] ?>" class="form-control" id="colFormLabel">
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">Data de Venc. da Fatura</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="data_venc_fatura" value="<?= $inf['data_venc_fatura'] ?>" class="form-control" id="colFormLabel">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">Prazo Inicial</label>
-                            <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['prazo_inicial'] ?>" class="form-control" id="colFormLabel">
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">Prazo Inicial</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="prazo_inicial" value="<?= $inf['prazo_inicial'] ?>" class="form-control" id="colFormLabel">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">Prazo Final</label>
-                            <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['prazo_final'] ?>" class="form-control" id="colFormLabel">
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">Prazo Final</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="prazo_final" value="<?= $inf['prazo_final'] ?>" class="form-control" id="colFormLabel">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">Prazo de Garantia</label>
-                            <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['prazo_garantia'] ?>" class="form-control" id="colFormLabel">
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">Prazo de Garantia</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="prazo_garantia" value="<?= $inf['prazo_garantia'] ?>" class="form-control" id="colFormLabel">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">Multa Por Atraso (%)</label>
-                            <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['multa'] ?>" class="form-control" id="colFormLabel">
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">Multa Por Atraso (%)</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="multa" value="<?= $inf['multa'] ?>" class="form-control" id="colFormLabel">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">Valor da Fatura Mensal</label>
-                            <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['valor_fatura'] ?>" class="form-control" id="colFormLabel">
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">Valor da Fatura Mensal</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="valor_fatura" value="<?= $inf['valor_fatura'] ?>" class="form-control" id="colFormLabel">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">Valor Total do Contrato</label>
-                            <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['valor_total'] ?>" class="form-control" id="colFormLabel">
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">Valor Total do Contrato</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="valor_total" value="<?= $inf['valor_total'] ?>" class="form-control" id="colFormLabel">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">Observações</label>
-                            <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['obs'] ?>" class="form-control" id="colFormLabel">
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">Observações</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="obs" value="<?= $inf['obs'] ?>" class="form-control" id="colFormLabel">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">Documentos Anexados</label>
-                            <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['anexo'] ?>" class="form-control" id="colFormLabel">
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">Documentos Anexados</label>
+                                <div class="col-sm-5">
+                                    <input type="file" name="anexo" value="<?= $inf['anexo'] ?>" class="form-control" id="colFormLabel">
+                                </div>
                             </div>
+                        <?php } ?>
+                    <?php endforeach; ?>
+                    <br>
+                    <div class="btn-toolbar pull-center">
+                        <div class="col-sm-5">
+                            <button type="submit" class="btn mr-4 btn-primary">Gravar</button>
+                            <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/listar_contrato") ?>">Voltar</a>
                         </div>
-                    <?php } ?>
-                <?php endforeach; ?>
-            </div>
-            <br>
-            <div class="btn-toolbar pull-center">
-                <div class="col-sm-5">
-                    <a class="btn mr-4 btn-primary" href="<?= site_url("#") ?>">Gravar</a>
-                    <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/listar_contrato") ?>">Voltar</a>
-                </div>
+                    </div>
+                </form>
             </div>
             <br>
         </div>

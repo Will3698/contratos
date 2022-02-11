@@ -54,28 +54,38 @@
             <div class="container-fluid">
                 <form action="<?= site_url("contratocontroller/salvar") ?>" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?= _v($dados, "id") ?>">
-                    <div class="row">
-                        <div class="col-md-2">
-                            <label>Cod. Contrato</label>
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Cod. Contrato</label>
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" placeholder="Cod. do contrato" name="cod_contrato" value="<?= _v($dados, "cod_contrato") ?>">
                         </div>
-                        <div class="col">
-                            <label>Nome/Razão Social</label>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Nome/Razão Social</label>
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" placeholder="Nome / Razão Social" name="nome" value="<?= _v($dados, "nome") ?>">
                         </div>
-                        <div class="col">
-                            <label>CNPJ</label>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">CNPJ</label>
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" placeholder="CNPJ" name="cnpj" value="<?= _v($dados, "cnpj") ?>">
                         </div>
-                        <div class="col">
-                            <label>Responsável</label>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Responsável</label>
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" placeholder="Responsável" name="responsavel" value="<?= _v($dados, "responsavel") ?>">
                         </div>
                     </div>
-                    <br>
-                    <div class="row">
-                        <div class="col">
-                            <label>Tipo de Serviço</label>
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Tipo de Serviço</label>
+                        <div class="col-sm-5">
                             <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="tipo_servico">
                                 <option selected>Escolher...</option>
                                 <option value="Manutenção">Manutenção</option>
@@ -83,9 +93,11 @@
                                 <option value="Insumos">Insumos</option>
                             </select>
                         </div>
+                    </div>
 
-                        <div class="col">
-                            <label>Situação</label>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Situação</label>
+                        <div class="col-sm-5">
                             <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="situacao">
                                 <option selected>Escolher...</option>
                                 <option value="Em elaboração">Em elaboração</option>
@@ -93,9 +105,11 @@
                                 <option value="Assinado">Assinado</option>
                             </select>
                         </div>
+                    </div>
 
-                        <div class="col">
-                            <label>SLA</label>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">SLA</label>
+                        <div class="col-sm-5">
                             <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="sla">
                                 <option selected>Escolher...</option>
                                 <option value="Crítico">Crítico</option>
@@ -104,9 +118,11 @@
                                 <option value="Baixo">Baixo</option>
                             </select>
                         </div>
+                    </div>
 
-                        <div class="col">
-                            <label>Tipo de Contrato</label>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Tipo de Contrato</label>
+                        <div class="col-sm-5">
                             <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="tipo_contrato">
                                 <option selected>Escolher...</option>
                                 <option value="Receita">Receita</option>
@@ -114,70 +130,86 @@
                             </select>
                         </div>
                     </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-2">
-                            <label>Data da Assinatura</label>
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Data da Assinatura</label>
+                        <div class="col-sm-5">
                             <input type="date" class="form-control" name="data_assinatura" value="<?= _v($dados, "data_assinatura") ?>">
                         </div>
+                    </div>
 
-                        <div class="col">
-                            <label>Data de Cadastro</label>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Data de Cadastro</label>
+                        <div class="col-sm-5">
                             <input type="date" class="form-control" name="data_cadastro" value="<?= _v($dados, "data_cadastro") ?>">
                         </div>
+                    </div>
 
-                        <div class="col">
-                            <label>Data de Venc. da Fatura</label>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Data de Venc. da Fatura</label>
+                        <div class="col-sm-5">
                             <input type="date" class="form-control" name="data_venc_fatura" value="<?= _v($dados, "data_venc_fatura") ?>">
                         </div>
+                    </div>
 
-                        <div class="col">
-                            <label>Prazo Inicial</label>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Prazo Inicial</label>
+                        <div class="col-sm-5">
                             <input type="date" class="form-control" name="prazo_inicial" value="<?= _v($dados, "prazo_inicial") ?>">
                         </div>
+                    </div>
 
-                        <div class="col">
-                            <label>Prazo Final</label>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Prazo Final</label>
+                        <div class="col-sm-5">
                             <input type="date" class="form-control" name="prazo_final" value="<?= _v($dados, "prazo_final") ?>">
                         </div>
                     </div>
-                    <br>
-                    <div class="row">
-                        <div class="col">
-                            <label>Prazo de Garantia</label>
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Prazo de Garantia</label>
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" placeholder="Prazo de Garantia" name="prazo_garantia" value="<?= _v($dados, "prazo_garantia") ?>">
                         </div>
-                        <div class="col">
-                            <label>Multa Por Atraso (%)</label>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Multa Por Atraso (%)</label>
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" placeholder="Multa Por Atraso (%)" name="multa" value="<?= _v($dados, "multa") ?>">
                         </div>
+                    </div>
 
-                        <div class="col">
-                            <label>Valor da Fatura Mensal</label>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Valor da Fatura Mensal</label>
+                        <div class="col-sm-5">
                             <input type="number" class="form-control" placeholder="Valor da Fatura Mensal" name="valor_fatura" value="<?= _v($dados, "valor_fatura") ?>">
                         </div>
+                    </div>
 
-                        <div class="col">
-                            <label>Valor Total do Contrato</label>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Valor Total do Contrato</label>
+                        <div class="col-sm-5">
                             <input type="number" class="form-control" placeholder="Valor Total do Contrato" name="valor_total" value="<?= _v($dados, "valor_total") ?>">
                         </div>
                     </div>
-                    <br>
-                    <div class="row">
-                        <div class="col">
-                            <label>Observações</label>
+
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Observações</label>
+                        <div class="col-sm-5">
                             <textarea class="form-control" placeholder="Observações..." name="obs" value="<?= _v($dados, "obs") ?>"></textarea>
                         </div>
                     </div>
-                    <br>
-                    <div class="row">
-                        <div class="col">
-                            <label>Anexar Documentos</label>
-                            <input type="file" class="form-control" placeholder="Valor Total do Contrato" name="anexo" value="<?= _v($dados, "anexo") ?>">
+
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Anexar Documentos</label>
+                        <div class="col-sm-5">
+                            <input type="file" class="form-control" name="anexo" value="<?= _v($dados, "anexo") ?>">
                         </div>
                     </div>
-                    <br>
-                    <div class="row">
+
+                    <div class="form-group row">
                         <div class="col">
                             <button type="submit" class="btn btn-primary">Cadastar</button>
                         </div>
