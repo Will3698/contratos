@@ -44,19 +44,19 @@ public class Contrato {
     private String tipo_contrato;
     @NonNull
     @Column(name = "data_assinatura", nullable = false)
-    private Date data_assinatura;
+    private String data_assinatura;
     @NonNull
     @Column(name = "data_cadastro", nullable = false)
-    private Date data_cadastro;
+    private String data_cadastro;
     @NonNull
     @Column(name = "data_venc_fatura", nullable = false)
-    private Date data_venc_fatura;
+    private String data_venc_fatura;
     @NonNull
     @Column(name = "prazo_inicial", nullable = false)
-    private Date prazo_inicial;
+    private String prazo_inicial;
     @NonNull
     @Column(name = "prazo_final", nullable = false)
-    private Date prazo_final;
+    private String prazo_final;
     @NonNull
     @Column(name = "prazo_garantia", nullable = false)
     private String prazo_garantia;
@@ -69,6 +69,9 @@ public class Contrato {
     @NonNull
     @Column(name = "valor_total", nullable = false)
     private double valor_total;
+    @NonNull
+    @Column(name = "status", nullable = false)
+    private String status;
     @Column(name = "obs")
     private String obs;
     @Column(name = "anexo")

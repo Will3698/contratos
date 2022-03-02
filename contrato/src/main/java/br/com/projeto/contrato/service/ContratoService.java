@@ -41,4 +41,43 @@ public class ContratoService {
         contratoRepository.deleteById(id);
     }
 
+    //lista contrato pelo cod_contrato
+    public List<Contrato> findByCodContrato(String cod){
+        return contratoRepository.findByCodContrato(cod);
+    }
+
+    //lista contrato pelo nome
+    public List<Contrato> findByNome(String nome){
+        return contratoRepository.findByNome(nome);
+    }
+
+    //lista contrato pelo cnpj
+    public List<Contrato> findByCnpj(String cnpj){
+        return contratoRepository.findByCnpj(cnpj);
+    }
+
+    //lista contrato pelo cnpj
+    public List<Contrato> findByResponsavel(String resp){
+        return contratoRepository.findByResponsavel(resp);
+    }
+
+    //lista contrato pelo tipo de serviço
+    public List<Contrato> findByServico(String serv){
+        return contratoRepository.findByServico(serv);
+    }
+
+    //lista contrato pela situação
+    public List<Contrato> findBySituacao(String sit){
+        return contratoRepository.findBySituacao(sit);
+    }
+
+    //lista contrato pela sla
+    public List<Contrato> findBySla(String sla){
+        return contratoRepository.findBySla(sla);
+    }
+
+    //lista contrato pela tipo contrato
+    public List<Contrato> findByTipoContrato(String con){
+        return contratoRepository.findByTipoContrato(con);
+    }
 }
