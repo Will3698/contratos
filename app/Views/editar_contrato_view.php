@@ -8,6 +8,7 @@
     <meta name="author" content="" />
     <title>Gerência de Contratos</title>
     <script src="<?= base_url("js/jquery-3.6.0.min.js") ?>"></script>
+    <script src="<?= base_url("js/jquery.mask.min.js") ?>"></script>
     <script src="<?= base_url("js/main.js") ?>"></script>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -23,7 +24,7 @@
             <div class="sidebar-heading border-bottom bg-light"><b>CONTRATOS</b></div>
             <div class="list-group list-group-flush">
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="<?= site_url("contratocontroller/cadastrar_contrato") ?>">Cadastrar Contrato</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="<?= site_url("contratocontroller/listar_contrato") ?>">Listar Contratos</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="<?= site_url("contratocontroller/buscar_contrato") ?>">Buscar Contratos</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Relatórios</a>
             </div>
         </div>
@@ -73,7 +74,7 @@
                             <div class="form-group row">
                                 <label for="colFormLabel" class="col-sm-3 col-form-label">CNPJ</label>
                                 <div class="col-sm-5">
-                                    <input type="text" name="cnpj" value="<?= $inf['cnpj'] ?>" class="form-control" id="colFormLabel">
+                                    <input type="text" name="cnpj" id="cnpj" value="<?= $inf['cnpj'] ?>" class="form-control" id="colFormLabel">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -87,8 +88,8 @@
                                 <div class="col-sm-5">
                                     <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="tipo_servico">
                                         <option selected><?= $inf['tipo_servico'] ?></option>
-                                        <option value="Manutenção">Manutenção</option>
-                                        <option value="Serviço">Serviço</option>
+                                        <option value="Manutencao">Manutenção</option>
+                                        <option value="Servico">Serviço</option>
                                         <option value="Insumos">Insumos</option>
                                     </select>
                                 </div>
@@ -96,49 +97,64 @@
                             <div class="form-group row">
                                 <label for="colFormLabel" class="col-sm-3 col-form-label">Situação</label>
                                 <div class="col-sm-5">
-                                    <input type="text" name="situacao" value="<?= $inf['situacao'] ?>" class="form-control" id="colFormLabel">
+                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="situacao">
+                                        <option selected><?= $inf['situacao'] ?></option>
+                                        <option value="Em elaboracao">Em elaboração</option>
+                                        <option value="Pendente de assinatura">Pendente de assinatura</option>
+                                        <option value="Assinado">Assinado</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="colFormLabel" class="col-sm-3 col-form-label">SLA</label>
                                 <div class="col-sm-5">
-                                    <input type="text" name="sla" value="<?= $inf['sla'] ?>" class="form-control" id="colFormLabel">
+                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="sla">
+                                        <option selected><?= $inf['sla'] ?></option>
+                                        <option value="Critico">Crítico</option>
+                                        <option value="Alto">Alto</option>
+                                        <option value="Medio">Médio</option>
+                                        <option value="Baixo">Baixo</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="colFormLabel" class="col-sm-3 col-form-label">Tipo de Contrato</label>
                                 <div class="col-sm-5">
-                                    <input type="text" name="tipo_contrato" value="<?= $inf['tipo_contrato'] ?>" class="form-control" id="colFormLabel">
+                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="tipo_contrato">
+                                        <option selected><?= $inf['tipo_contrato'] ?></option>
+                                        <option value="Receita">Receita</option>
+                                        <option value="Despesa">Despesa</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="colFormLabel" class="col-sm-3 col-form-label">Data da Assinatura</label>
                                 <div class="col-sm-5">
-                                    <input type="text" name="data_assinatura" value="<?= $inf['data_assinatura'] ?>" class="form-control" id="colFormLabel">
+                                    <input type="text" name="data_assinatura" value="<?= date("d-m-Y", strtotime($inf['data_assinatura'])) ?>" class="form-control" id="colFormLabel">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="colFormLabel" class="col-sm-3 col-form-label">Data de Cadastro</label>
                                 <div class="col-sm-5">
-                                    <input type="text" name="data_cadastro" value="<?= $inf['data_cadastro'] ?>" class="form-control" id="colFormLabel">
+                                    <input type="text" name="data_cadastro" value="<?= date("d-m-Y", strtotime($inf['data_cadastro'])) ?>" class="form-control" id="colFormLabel">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="colFormLabel" class="col-sm-3 col-form-label">Data de Venc. da Fatura</label>
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">Dia de Venc. da Fatura</label>
                                 <div class="col-sm-5">
-                                    <input type="text" name="data_venc_fatura" value="<?= $inf['data_venc_fatura'] ?>" class="form-control" id="colFormLabel">
+                                    <input type="number" name="data_venc_fatura" value="<?= $inf['data_venc_fatura'] ?>" class="form-control" id="colFormLabel">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="colFormLabel" class="col-sm-3 col-form-label">Prazo Inicial</label>
                                 <div class="col-sm-5">
-                                    <input type="text" name="prazo_inicial" value="<?= $inf['prazo_inicial'] ?>" class="form-control" id="colFormLabel">
+                                    <input type="text" name="prazo_inicial" value="<?= date("d-m-Y", strtotime($inf['prazo_inicial'])) ?>" class="form-control" id="colFormLabel">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="colFormLabel" class="col-sm-3 col-form-label">Prazo Final</label>
                                 <div class="col-sm-5">
-                                    <input type="text" name="prazo_final" value="<?= $inf['prazo_final'] ?>" class="form-control" id="colFormLabel">
+                                    <input type="text" name="prazo_final" value="<?= date("d-m-Y", strtotime($inf['prazo_final'])) ?>" class="form-control" id="colFormLabel">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -159,12 +175,19 @@
                                     <input type="text" name="valor_fatura" value="<?= $inf['valor_fatura'] ?>" class="form-control" id="colFormLabel">
                                 </div>
                             </div>
+
                             <div class="form-group row">
-                                <label for="colFormLabel" class="col-sm-3 col-form-label">Valor Total do Contrato</label>
+                                <label for="colFormLabel" class="col-sm-3 col-form-label">Status</label>
                                 <div class="col-sm-5">
-                                    <input type="text" name="valor_total" value="<?= $inf['valor_total'] ?>" class="form-control" id="colFormLabel">
+                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="status">
+                                        <option selected><?= $inf['status'] ?></option>
+                                        <option value="Cancelado">Cancelado</option>
+                                        <option value="Finalizado">Finalizado</option>
+                                        <option value="Vigente">Vigente</option>
+                                    </select>
                                 </div>
                             </div>
+
                             <div class="form-group row">
                                 <label for="colFormLabel" class="col-sm-3 col-form-label">Observações</label>
                                 <div class="col-sm-5">
@@ -183,7 +206,7 @@
                     <div class="btn-toolbar pull-center">
                         <div class="col-sm-5">
                             <button type="submit" class="btn mr-4 btn-primary">Gravar</button>
-                            <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/listar_contrato") ?>">Voltar</a>
+                            <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/buscar_contrato") ?>">Voltar</a>
                         </div>
                     </div>
                 </form>

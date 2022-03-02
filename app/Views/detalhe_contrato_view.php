@@ -8,6 +8,7 @@
     <meta name="author" content="" />
     <title>Gerência de Contratos</title>
     <script src="<?= base_url("js/jquery-3.6.0.min.js") ?>"></script>
+    <script src="<?= base_url("js/jquery.mask.min.js") ?>"></script>
     <script src="<?= base_url("js/main.js") ?>"></script>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -23,7 +24,7 @@
             <div class="sidebar-heading border-bottom bg-light"><b>CONTRATOS</b></div>
             <div class="list-group list-group-flush">
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="<?= site_url("contratocontroller/cadastrar_contrato") ?>">Cadastrar Contrato</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="<?= site_url("contratocontroller/listar_contrato") ?>">Listar Contratos</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="<?= site_url("contratocontroller/buscar_contrato") ?>">Buscar Contratos</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Relatórios</a>
             </div>
         </div>
@@ -108,74 +109,97 @@
                         <div class="form-group row">
                             <label for="colFormLabel" class="col-sm-3 col-form-label">Data da Assinatura</label>
                             <div class="col-sm-5">
-                                <input type="text" value="<?= date("d/m/Y", strtotime($inf['data_assinatura'])) ?>" class="form-control" id="colFormLabel" disabled="">
+                                <input type="text" value="<?= date("d-m-Y", strtotime($inf['data_assinatura'])) ?>" class="form-control" id="colFormLabel" disabled="">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="colFormLabel" class="col-sm-3 col-form-label">Data de Cadastro</label>
                             <div class="col-sm-5">
-                                <input type="text" value="<?= date("d/m/Y", strtotime($inf['data_cadastro'])) ?>" class="form-control" id="colFormLabel" disabled="">
+                                <input type="text" value="<?= date("d-m-Y", strtotime($inf['data_cadastro'])) ?>" class="form-control" id="colFormLabel" disabled="">
                             </div>
-                        </div>                        
+                        </div>
                         <div class="form-group row">
-                            <label for="colFormLabel" class="col-sm-3 col-form-label">Data de Venc. da Fatura</label>
+                            <label for="colFormLabel" class="col-sm-3 col-form-label">Dia de Venc. da Fatura</label>
                             <div class="col-sm-5">
-                                <input type="text" value="<?= date("d/m/Y", strtotime($inf['data_venc_fatura'])) ?>" class="form-control" id="colFormLabel" disabled="">
+                                <input type="text" value="<?= $inf['data_venc_fatura'] ?>" class="form-control" id="colFormLabel" disabled="">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="colFormLabel" class="col-sm-3 col-form-label">Prazo Inicial</label>
                             <div class="col-sm-5">
-                                <input type="text" value="<?= date("d/m/Y", strtotime($inf['prazo_inicial'])) ?>" class="form-control" id="colFormLabel" disabled="">
+                                <input type="text" id="dataInicil" value="<?= date("d-m-Y", strtotime($inf['prazo_inicial'])) ?>" class="form-control" id="colFormLabel" disabled="">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="colFormLabel" class="col-sm-3 col-form-label">Prazo Final</label>
                             <div class="col-sm-5">
-                                <input type="text" value="<?= date("d/m/Y", strtotime($inf['prazo_final'])) ?>" class="form-control" id="colFormLabel" disabled="">
+                                <input type="text" id="dataFinal" value="<?= date("d-m-Y", strtotime($inf['prazo_final'])) ?>" class="form-control" id="colFormLabel" disabled="">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="colFormLabel" class="col-sm-3 col-form-label">Prazo de Garantia</label>
                             <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['prazo_garantia'] ?>" class="form-control" id="colFormLabel" disabled="">
+                                <div class="input-group mb-3">
+                                    <input type="text" value="<?= $inf['prazo_garantia'] ?>" class="form-control" id="colFormLabel" disabled="">
+                                    <span class="input-group-text">Meses</span>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="colFormLabel" class="col-sm-3 col-form-label">Multa Por Atraso (%)</label>
                             <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['multa'] ?>" class="form-control" id="colFormLabel" disabled="">
+                                <div class="input-group mb-3">
+                                    <input type="text" value="<?= $inf['multa'] ?>" class="form-control" id="colFormLabel" disabled="">
+                                    <span class="input-group-text">%</span>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="colFormLabel" class="col-sm-3 col-form-label">Valor da Fatura Mensal</label>
                             <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['valor_fatura'] ?>" class="form-control" id="colFormLabel" disabled="">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">R$</span>
+                                    <input type="text" id="fatMensal" value="<?= $inf['valor_fatura'] ?>" class="form-control" id="colFormLabel" disabled="">
+                                </div>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="colFormLabel" class="col-sm-3 col-form-label">Valor Total do Contrato</label>
                             <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['valor_total'] ?>" class="form-control" id="colFormLabel" disabled="">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">R$</span>
+                                    <input type="text" value="<?= $inf['valor_total'] ?>" class="form-control" id="colFormLabel" disabled="">
+                                </div>
                             </div>
                         </div>
+
+                        <div class="form-group row">
+                            <label for="colFormLabel" class="col-sm-3 col-form-label">Status</label>
+                            <div class="col-sm-5">
+                                <input type="text" value="<?= $inf['status'] ?>" class="form-control" id="colFormLabel" disabled="">
+                            </div>
+                        </div>
+
                         <div class="form-group row">
                             <label for="colFormLabel" class="col-sm-3 col-form-label">Observações</label>
                             <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['obs'] ?>" class="form-control" id="colFormLabel" disabled="">
+                                <input type="text" value="<?= $inf['obs'] ?>" class="form-control" id="colFormLabel" disabled="">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="colFormLabel" class="col-sm-3 col-form-label">Documentos Anexados</label>
                             <div class="col-sm-5">
-                                <input type="email" value="<?= $inf['anexo'] ?>" class="form-control" id="colFormLabel" disabled="">
+                                <input type="text" value="<?= $inf['anexo'] ?>" class="form-control" id="colFormLabel" disabled="">
                             </div>
                         </div>
+
+
+
                         <br>
                         <div class="btn-toolbar pull-center">
                             <div class="col-sm-5">
                                 <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/editar_contrato/?id={$inf["id"]}") ?>">Editar</a>
-                                <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/listar_contrato") ?>">Voltar</a>
+                                <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/buscar_contrato") ?>">Voltar</a>
                                 <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/apagar_contrato/{$inf['id']}") ?>">Apagar</a>
                             </div>
                         </div>

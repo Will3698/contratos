@@ -1,0 +1,63 @@
+CRITICAL - 2022-02-14 13:21:32 --> file_get_contents(http://localhost:8080/api/contrato): Failed to open stream: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 19)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(19): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->listar_contrato()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-14 13:38:19 --> Undefined array key "id"
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp2\\htdoc...', 63)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->detalhe_contrato()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-14 13:38:32 --> Undefined array key "id"
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp2\\htdoc...', 63)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->detalhe_contrato()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-14 13:39:32 --> Cannot use [] for reading
+#0 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->detalhe_contrato()
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-14 14:14:50 --> Cannot access offset of type string on string
+#0 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vincular()
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-14 14:15:16 --> Cannot access offset of type string on string
+#0 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vincular()
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-14 14:21:49 --> Undefined variable ${"id":"6","cod_contrato":"sdadasd"}
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp2\\htdoc...', 118)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vincular()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-14 14:22:06 --> file_get_contents({&quot;id&quot;:&quot;6&quot;,&quot;cod_contrato&quot;:&quot;sdadasd&quot;}): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 118)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(118): file_get_contents('{"id":"6","cod_...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vincular()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-14 14:22:25 --> file_get_contents({&quot;id&quot;:&quot;6&quot;,&quot;cod_contrato&quot;:&quot;sdadasd&quot;}): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 118)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(118): file_get_contents('{"id":"6","cod_...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vincular()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}

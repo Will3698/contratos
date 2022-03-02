@@ -1,0 +1,141 @@
+CRITICAL - 2022-02-18 12:19:20 --> file_get_contents(http://localhost:8080/api/contrato): Failed to open stream: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 109)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(109): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_contrato()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-18 12:31:36 --> Array to string conversion
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp2\\htdoc...', 119)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-18 12:37:44 --> file_get_contents(http://localhost:8080/api/contrato/situacao/Pendente de assinatura): Failed to open stream: HTTP request failed! HTTP/1.1 400 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 159)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(159): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-18 12:47:38 --> file_get_contents(http://localhost:8080/api/contrato): Failed to open stream: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 109)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(109): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_contrato()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-18 12:57:24 --> file_get_contents(http://localhost:8080/api/contrato/sla/Crítico): Failed to open stream: HTTP request failed! HTTP/1.1 400 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 167)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(167): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-18 12:59:15 --> file_get_contents(http://localhost:8080/api/contrato/sla/Crítico): Failed to open stream: HTTP request failed! HTTP/1.1 400 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 167)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(167): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-18 13:07:33 --> file_get_contents(http://localhost:8080/api/contrato/tipoContrato/Receita): Failed to open stream: HTTP request failed! HTTP/1.1 404 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 171)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(171): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-18 13:31:14 --> file_get_contents(http://localhost:8080/api/contrato): Failed to open stream: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 109)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(109): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_contrato()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-18 13:44:20 --> file_get_contents(http://localhost:8080/api/contrato): Failed to open stream: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 109)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(109): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_contrato()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-18 14:10:12 --> file_get_contents(http://localhost:8080/api/contrato): Failed to open stream: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 63)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(63): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->editar_contrato()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-18 15:51:33 --> Unclosed '{' on line 60 does not match ')'
+#0 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('editar_contrato...', Array, true)
+#2 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(64): view('editar_contrato...', Array)
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->editar_contrato()
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-18 15:59:44 --> Undefined array key "data_assinatura"
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp2\\htdoc...', 64)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->editar_contrato()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-18 16:01:20 --> Undefined array key "data_assinatura"
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp2\\htdoc...', 63)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->editar_contrato()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-18 16:02:56 --> Undefined array key "data_assinatura"
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp2\\htdoc...', 63)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->editar_contrato()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-18 16:03:07 --> Undefined array key "data_assinatura"
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp2\\htdoc...', 63)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->editar_contrato()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-18 16:08:10 --> Undefined array key "id"
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp2\\htdoc...', 63)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->editar_contrato()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-18 16:08:28 --> Undefined array key "id"
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp2\\htdoc...', 63)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->editar_contrato()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-18 16:10:52 --> Undefined array key "id"
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp2\\htdoc...', 62)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->editar_contrato()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
