@@ -200,6 +200,7 @@
                                     <input type="file" name="anexo" value="<?= $inf['anexo'] ?>" class="form-control" id="colFormLabel">
                                 </div>
                             </div>
+                            <input type="hidden" name="op_pag" value="Em Aberto">
                         <?php } ?>
                     <?php endforeach; ?>
                     <br>

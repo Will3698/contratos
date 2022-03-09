@@ -48,6 +48,7 @@ class ContratoController extends BaseController
 
     public function detalhe_contrato()
     {
+        $arr['dados'] = null;
         $url = "http://localhost:8080/api/contrato";
         $arr['cont'] = json_decode(file_get_contents($url), true);
         /*for ($i = 0; $i < count($arr['cont']); $i++) {
