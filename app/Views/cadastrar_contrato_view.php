@@ -215,6 +215,8 @@
 
                     <input type="hidden" name="status" value="Vigente">
 
+                    
+
                     <div class="form-group row">
                         <div class="col">
                             <button type="submit" class="btn btn-primary">Cadastar</button>

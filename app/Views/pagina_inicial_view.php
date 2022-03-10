@@ -15,6 +15,40 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        //carregar a API de visualizacao e o pacote do gráfico
+        google.charts.load('current', {
+            'packages' : [
+                'corechart'
+            ]
+        });
+
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart(){
+            var jsonData = $.ajax(
+                {
+                    url :  'contratocontroller/getDados',
+                    dataType: 'json',
+                    async: false
+                }
+            ).responseText
+
+            var data = new google.visualization.DataTable(jsonData);
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+
+            chart.draw(
+                data,
+                {
+                    width: '100%',
+                    height: 400
+                }
+            );
+        }
+    </script>
 </head>
 
 <body>
@@ -54,7 +88,8 @@
             </nav>
             <!-- Page content-->
             <div class="container-fluid">
-
+                <b>RELATÓRIO DE PAGAMENTOS</b>
+                <div id="chart_div"></div>
             </div>
         </div>
     </div>

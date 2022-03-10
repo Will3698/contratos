@@ -48,6 +48,7 @@ class ContratoController extends BaseController
 
     public function detalhe_contrato()
     {
+        $arr['dados'] = null;
         $url = "http://localhost:8080/api/contrato";
         $arr['cont'] = json_decode(file_get_contents($url), true);
         /*for ($i = 0; $i < count($arr['cont']); $i++) {
@@ -182,5 +183,23 @@ class ContratoController extends BaseController
                 return view('busca_contrato_view', $arr);
             }
         }
+    }
+
+    public function getDados(){
+        //$dados = ""
+        
+        echo '{
+            "cols": [
+                  {"id":"","label":"Topping","pattern":"","type":"string"},
+                  {"id":"","label":"Slices","pattern":"","type":"number"}                  
+                ],
+            "rows": [
+                  {"c":[{"v":"Mushrooms","f":null},{"v":3,"f":null},{"v":3,"f":null}]},
+                  {"c":[{"v":"Onions","f":null},{"v":1,"f":null},{"v":3,"f":null}]},
+                  {"c":[{"v":"Olives","f":null},{"v":1,"f":null},{"v":3,"f":null}]},
+                  {"c":[{"v":"Zucchini","f":null},{"v":1,"f":null},{"v":3,"f":null}]},
+                  {"c":[{"v":"Pepperoni","f":null},{"v":2,"f":null},{"v":3,"f":null}]}
+                ]
+          }';
     }
 }

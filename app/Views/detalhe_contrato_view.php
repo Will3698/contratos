@@ -200,7 +200,71 @@
                             <div class="col-sm-5">
                                 <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/editar_contrato/?id={$inf["id"]}") ?>">Editar</a>
                                 <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/buscar_contrato") ?>">Voltar</a>
-                                <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/apagar_contrato/{$inf['id']}") ?>">Apagar</a>
+                                <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/apagar_contrato/{$inf['id']}") ?>">Apagar</a><br>
+                                <br>
+
+                                <?php if ($inf['op_pag'] == null) { ?>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        Pagamento
+                                    </button>
+                                <?php } else { ?>
+                                    <div class="alert alert-success" role="alert">
+                                        Contrato com pagamento efetuado!
+                                    </div>
+                                <?php } ?>
+
+                                <form action="<?= site_url("pagamentocontroller/pagamento_contrato") ?>" method="POST" enctype="multipart/form-data">
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Realizar Pagamento</h5>
+                                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <?php foreach ($cont as $inf) : ?>
+                                                        <?php if ($_GET['id'] == $inf['id']) { ?>
+                                                            <input type="hidden" name="id" value="<?= _v($dados, "id") ?>">
+
+                                                            <input type="hidden" name="id_contrato_pag" value="<?= $inf['id'] ?>">
+
+                                                            <div class="form-group row">
+                                                                <label for="colFormLabel" class="col-sm-3 col-form-label">Valor Contrato</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" value="<?= $inf['valor_total'] ?>" class="form-control" id="colFormLabel" disabled="">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group row">
+                                                                <label for="colFormLabel" class="col-sm-3 col-form-label">Multa</label>
+                                                                <div class="col-sm-5">
+                                                                    <div class="input-group mb-3">
+                                                                        <input type="text" value="<?= $inf['multa'] ?>" class="form-control" id="colFormLabel" disabled="">
+                                                                        <span class="input-group-text">%</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group row">
+                                                                <label for="colFormLabel" class="col-sm-3 col-form-label">Valor Total</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" value="<?= $inf['valor_pagar'] ?>" class="form-control" id="colFormLabel" disabled="">
+                                                                </div>
+                                                            </div>
+
+                                                        <?php } ?>
+                                                    <?php endforeach; ?>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                                    <button type="submit" class="btn btn-primary">Pagar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     <?php } ?>
