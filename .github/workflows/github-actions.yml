@@ -16,18 +16,21 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adop'
+          
+      - name: banco de dados
+      - uses: ireznik/postgis-action@v12
+        with:
+           postgresql version: '12-master'  
+           postgresql password: 'admin'   
+           postgresql user: 'postgres'  
+           postgresql db: 'contrato'
+        
       - name: Validate Gradlew wrapper 
         uses: gradlew/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
       - name: Build with Gradlew
         run: ./gradlew build
         
-      - name: banco de dados
-      - uses: ireznik/postgis-action@v12
-        with:
-         postgresql version: '12-master'  
-         postgresql password: 'admin'   
-         postgresql user: 'postgres'  
-         postgresql db: 'contrato' 
+       
       
       
         
