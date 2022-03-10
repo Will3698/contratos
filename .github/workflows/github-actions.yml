@@ -21,13 +21,14 @@ jobs:
       - name: Build with Gradlew
         run: ./gradlew build
         
-      - name: Deploy no Heroku
-        uses: akhileshns/heroku-deploy@v3.12.12
+      - name: banco de dados
+      - uses: ireznik/postgis-action@v12
         with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_api_name: "contrato"
-          heroku_email: "william.costa@escolar.ifrn.edu.br"
-          usedoker: 'true'
+         postgresql version: '12-master'  
+         postgresql password: 'admin'   
+         postgresql user: 'postgres'  
+         postgresql db: 'contrato' 
+      
       
         
       
