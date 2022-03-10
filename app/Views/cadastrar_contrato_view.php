@@ -215,7 +215,7 @@
 
                     <input type="hidden" name="status" value="Vigente">
 
-                    <input type="hidden" name="op_pag" value="Em Aberto">
+                    
 
                     <div class="form-group row">
                         <div class="col">

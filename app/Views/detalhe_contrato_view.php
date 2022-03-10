@@ -203,9 +203,15 @@
                                 <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/apagar_contrato/{$inf['id']}") ?>">Apagar</a><br>
                                 <br>
 
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    Pagamento
-                                </button>
+                                <?php if ($inf['op_pag'] == null) { ?>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        Pagamento
+                                    </button>
+                                <?php } else { ?>
+                                    <div class="alert alert-success" role="alert">
+                                        Contrato com pagamento efetuado!
+                                    </div>
+                                <?php } ?>
 
                                 <form action="<?= site_url("pagamentocontroller/pagamento_contrato") ?>" method="POST" enctype="multipart/form-data">
                                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -221,7 +227,7 @@
                                                     <?php foreach ($cont as $inf) : ?>
                                                         <?php if ($_GET['id'] == $inf['id']) { ?>
                                                             <input type="hidden" name="id" value="<?= _v($dados, "id") ?>">
-                                                            
+
                                                             <input type="hidden" name="id_contrato_pag" value="<?= $inf['id'] ?>">
 
                                                             <div class="form-group row">

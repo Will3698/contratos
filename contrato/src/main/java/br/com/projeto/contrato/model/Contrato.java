@@ -3,7 +3,6 @@ package br.com.projeto.contrato.model;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Getter
 @Setter
@@ -72,6 +71,10 @@ public class Contrato {
     @NonNull
     @Column(name = "status", nullable = false)
     private String status;
+    @Column(name = "op_pag")
+    private String op_pag;
+    @Column(name = "valor_pagar")
+    private String valor_pagar;
     @Column(name = "obs")
     private String obs;
     @Column(name = "anexo")
