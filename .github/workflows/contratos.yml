@@ -11,13 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Configurando o java 11
+      - name: Configurando o java 8
         uses: actions/setup-java@v2
         with:
-          distribution: '<distribution>'
-          java-version: '11'
-          architecture: x64
-          #distribution: 'adop'
+          java-version: '8'
+          distribution: 'adop'
       - run: java -cp java HelloWorldApp
           
       - name: Validate Gradlew wrapper 
