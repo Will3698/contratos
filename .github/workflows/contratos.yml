@@ -25,8 +25,7 @@ jobs:
           postgresql version: '11'  # See https://hub.docker.com/_/postgres for available versions
           postgresql db: 'contrato' 
           postgresql user: 'postgres'
-          postgresql password: 'admin'   
-          
+          postgresql password: 'admin'    
       - name: Permissão para executar o gradlew
         run: chmod +x ./gradlew
       - name: Build with Gradle
