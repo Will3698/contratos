@@ -19,6 +19,8 @@ jobs:
           
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
+      - name: Build with Gradle
+        run: ./gradlew build
       - name: config bd
         uses: harmon758/postgresql-action@v1
         with:
@@ -26,10 +28,9 @@ jobs:
           postgresql db: 'contrato' 
           postgresql user: 'postgres'
           postgresql password: 'admin'    
-      - name: Permissão para executar o gradlew
-        run: chmod +x ./gradle
-      - name: Build with Gradle
-        run: ./gradlew build
+      #- name: Permissão para executar o gradlew
+       # run: chmod +x ./gradlew
+     
         
       - name: Deploy no Heroku
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
