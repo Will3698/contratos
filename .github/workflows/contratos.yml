@@ -27,12 +27,9 @@ jobs:
           postgresql db: 'contrato' 
           postgresql user: 'postgres'
           postgresql password: 'admin'   
-          
-      - name: Look for gradlew
-        run: find / -type f -name "gradlew"
-      
+         
       - name: Permissão para executar o gradlew
-        run: chmod +x ./gradlew
+        run: chmod +x ./gradle build
       - name: Build with Gradle
         run: ./gradlew build
      
