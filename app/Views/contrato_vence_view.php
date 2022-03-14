@@ -2,50 +2,20 @@
 <html lang="pt-br">
 
 <head>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Gerência de Contratos</title>
-    <script src="<?= base_url("js/jquery-3.6.0.min.js") ?>"></script>
-    <script src="<?= base_url("js/jquery.mask.min.js") ?>"></script>
-    <script src="<?= base_url("js/main.js") ?>"></script>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="<?= base_url("css/styles.css") ?>" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>
-        //carregar a API de visualizacao e o pacote do gráfico
-        google.charts.load('current', {
-            'packages': [
-                'corechart'
-            ]
-        });
-
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            var jsonData = $.ajax({
-                url: 'home/getDados',
-                dataType: 'json',
-                async: false
-            }).responseText
-
-            var data = new google.visualization.DataTable(jsonData);
-            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-
-            chart.draw(
-                data, {
-                    width: '100%',
-                    height: 200
-                }
-            );
-        }
-    </script>
+    <script src="<?= base_url("js/jquery-3.6.0.min.js") ?>"></script>
+    <script src="<?= base_url("js/jquery.mask.min.js") ?>"></script>
+    <script src="<?= base_url("js/main.js") ?>"></script>
 </head>
 
 <body>
@@ -85,39 +55,56 @@
             </nav>
             <!-- Page content-->
             <div class="container-fluid">
+                <br>
+
                 <div class="form-group row">
-                    <b>RELATÓRIO DE PAGAMENTOS</b>
-                    <div id="chart_div"></div>
-
+                    <label for="colFormLabel" class="col-sm-3 col-form-label">Buscar Contrato Próximo a Vencer:</label>
+                    <div class="col-sm-5">
+                        <form action="<?= site_url("contratocontroller/buscar_vence_contrato") ?>" method="POST" enctype="multipart/form-data">
+                            <select class="custom-select my-1 mr-sm-2" id="mySelect" name="dias">
+                                <option selected>Escolher...</option>
+                                <option value="15">Em 15 dias</option>
+                                <option value="30">Em 1 mês</option>
+                                <option value="90">Em 3 meses</option>
+                            </select>
+                            <div class="form-group row">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary">Buscar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                     <hr>
-
                     <br>
                     <table class="table table-light table-hover" style="text-align: center;">
                         <thead class="table-secondary">
                             <tr>
-                                <th scope="col">Nome da Empresa</th>
-                                <th scope="col">Valor Pago</th>
-                                <th scope="col">Data do Pagamento</th>                                
+                                <th scope="col">Código Contrato</th>
+                                <th scope="col">CNPJ</th>
+                                <th scope="col">Nome/Razão Social</th>
+                                <th scope="col">Detalhes do Contrato</th>
                             </tr>
                         </thead>
                         <?php foreach ($list as $inf) : ?>
-                            <tbody>
-                                <tr>                                    
-                                    <td><?php print $inf['id_contrato_pag']['nome']?></td>
-                                    <td><?php print $inf['id_contrato_pag']["valor_pagar"] ?></td>
-                                    <td><?php print date("d-m-Y", strtotime($inf["registro"])) ?></td>                                    
-                                </tr>
-                            </tbody>
+                            <?php if ($inf["op_pag"] == null) { ?>
+                                <tbody>
+                                    <tr>
+                                        <td><?php print $inf["cod_contrato"] ?></td>
+                                        <td><?php print $inf["cnpj"] ?></td>
+                                        <td><?php print $inf["nome"] ?></td>
+                                        <td><a class="btn btn-outline-primary" href="<?= site_url("contratocontroller/detalhe_contrato/?id={$inf["id"]}") ?>">Visualizar</a></td>
+                                    </tr>
+                                </tbody>
+                            <?php } ?>
                         <?php endforeach; ?>
                     </table>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="<?= base_url("js/scripts.js") ?>"></script>
 </body>
 
 </html>

@@ -41,6 +41,26 @@ public class ContratoService {
         contratoRepository.deleteById(id);
     }
 
+    //lista contrato proximo a vencer 15 dias
+    public List<Contrato> listaContratoProximoVencer15(){
+        return contratoRepository.listaContratoProximoVencer15();
+    }
+
+    //lista contrato proximo a vencer 30 dias
+    public List<Contrato> listaContratoProximoVencer30(){
+        return contratoRepository.listaContratoProximoVencer30();
+    }
+
+    //lista contrato proximo a vencer 90 dias
+    public List<Contrato> listaContratoProximoVencer90(){
+        return contratoRepository.listaContratoProximoVencer90();
+    }
+
+    //lista contrato pago
+    public List<Contrato> listaContratoPago(){
+        return contratoRepository.listaContratoPago();
+    }
+
     //lista contrato pelo cod_contrato
     public List<Contrato> findByCodContrato(String cod){
         return contratoRepository.findByCodContrato(cod);

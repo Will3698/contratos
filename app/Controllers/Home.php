@@ -29,7 +29,7 @@ class Home extends BaseController
         $cols = [
             [
                 'id' => '',
-                'label' => 'Mês',
+                'label' => 'Nome da Empresa',
                 'pattern' => '',
                 'type' => 'string'
             ],
@@ -62,6 +62,6 @@ class Home extends BaseController
         ];
 
         //echo '<pre>';
-        echo json_encode($dados);        
+        print json_encode($dados);        
     }
 }

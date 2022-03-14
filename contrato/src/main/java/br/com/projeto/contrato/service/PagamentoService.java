@@ -37,12 +37,12 @@ public class PagamentoService {
         return pagamentoRepository.save(pagamento);
     }
 
-    //atualizar contrato
+    //atualizar pagamento
     public Pagamento update(Pagamento pagamento){
         return pagamentoRepository.save(pagamento);
     }
 
-    //deletar contrato
+    //deletar pagamento
     public void delete(Long id){
         pagamentoRepository.deleteById(id);
     }

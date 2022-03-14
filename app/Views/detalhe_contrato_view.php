@@ -15,6 +15,9 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="<?= base_url("css/styles.css") ?>" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script>
+        window.location.href = '#ancora';
+    </script>
 </head>
 
 <body>
@@ -200,14 +203,16 @@
                             <div class="col-sm-5">
                                 <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/editar_contrato/?id={$inf["id"]}") ?>">Editar</a>
                                 <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/buscar_contrato") ?>">Voltar</a>
-                                <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/apagar_contrato/{$inf['id']}") ?>">Apagar</a><br>
-                                <br>
 
                                 <?php if ($inf['op_pag'] == null) { ?>
+                                    <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/apagar_contrato/{$inf['id']}") ?>">Apagar</a><br>
+                                    <br>
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         Pagamento
                                     </button>
                                 <?php } else { ?>
+                                    <br>
+                                    <br>
                                     <div class="alert alert-success" role="alert">
                                         Contrato com pagamento efetuado!
                                     </div>
@@ -273,10 +278,11 @@
             <br>
         </div>
     </div>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="<?= base_url("js/scripts.js") ?>"></script>
+    <a href="#" id="ancora">
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="<?= base_url("js/scripts.js") ?>"></script>
 </body>
 
 </html>

@@ -57,6 +57,30 @@ public class ContratoController {
         }
     }
 
+    //retorna contrato proximo a vencer 15
+    @GetMapping(path = "/contrato/vencer15")
+    public ResponseEntity<List<Contrato>> listaContratoProximoVencer15(){
+        return ResponseEntity.status(HttpStatus.OK).body(contratoService.listaContratoProximoVencer15());
+    }
+
+    //retorna contrato proximo a vencer 30
+    @GetMapping(path = "/contrato/vencer30")
+    public ResponseEntity<List<Contrato>> listaContratoProximoVencer30(){
+        return ResponseEntity.status(HttpStatus.OK).body(contratoService.listaContratoProximoVencer30());
+    }
+
+    //retorna contrato proximo a vencer 90
+    @GetMapping(path = "/contrato/vencer90")
+    public ResponseEntity<List<Contrato>> listaContratoProximoVencer90(){
+        return ResponseEntity.status(HttpStatus.OK).body(contratoService.listaContratoProximoVencer90());
+    }
+
+    //lista contrato pago
+    @GetMapping(path = "/contrato/pago")
+    public ResponseEntity<List<Contrato>> listaContratoPago(){
+        return ResponseEntity.status(HttpStatus.OK).body(contratoService.listaContratoPago());
+    }
+
     //retorna contrato por cod_contrato
     @GetMapping(path = "/contrato/codContrato/{cod}")
     public ResponseEntity<List<Contrato>> findByCodContrato(@PathVariable String cod){

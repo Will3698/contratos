@@ -184,4 +184,37 @@ class ContratoController extends BaseController
             }
         }
     }
+
+    public function vence_contrato()
+    {
+        $url = "http://localhost:8080/api/contrato/vencer15";
+        $arr['list'] = json_decode(file_get_contents($url), true);
+
+        return view('contrato_vence_view', $arr);
+    }
+
+    public function buscar_vence_contrato()
+    {
+        $arr['list'] = null;
+        $val = $this->request->getPost(null);
+        $op = (int) $val['dias'];
+        //print_r($op);
+        //die();
+        if($op == 15){
+            $url = "http://localhost:8080/api/contrato/vencer15";
+            $arr['list'] = json_decode(file_get_contents($url), true);
+        }
+
+        if($op == 30){
+            $url = "http://localhost:8080/api/contrato/vencer30";
+            $arr['list'] = json_decode(file_get_contents($url), true);
+        }
+
+        if($op == 90){
+            $url = "http://localhost:8080/api/contrato/vencer90";
+            $arr['list'] = json_decode(file_get_contents($url), true);
+        }
+
+        return view('contrato_vence_view', $arr);
+    }
 }
