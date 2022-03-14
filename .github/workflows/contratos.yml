@@ -18,16 +18,19 @@ jobs:
           distribution: 'adopt'
           
       - name: Validate Gradle wrapper
-        #uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
-        uses: gradle/wrapper-validation-action@v1.0.4
-        
+        uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
+                
       - name: config bd
         uses: harmon758/postgresql-action@v1
         with:
           postgresql version: '11'  # See https://hub.docker.com/_/postgres for available versions
           postgresql db: 'contrato' 
           postgresql user: 'postgres'
-          postgresql password: 'admin'    
+          postgresql password: 'admin'   
+          
+      - name: Look for gradlew
+        run: find / -type f -name "gradlew"
+      
       - name: Permissão para executar o gradlew
         run: chmod +x ./gradlew
       - name: Build with Gradle
