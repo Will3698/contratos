@@ -29,4 +29,12 @@ jobs:
         run: chmod +x ./gradlew
       - name: Build with Gradle
         run: ./gradlew build
+        
+      - name: Deploy no Heroku
+        uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "demo-dsc" #Must be unique in Heroku
+          heroku_email: "william.costa@escolar.ifrn.edu.br"
+          usedocker: "true"
       
