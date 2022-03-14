@@ -16,6 +16,7 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adop'
+          
       - name: Validate Gradlew wrapper 
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
       - name: config bd
@@ -24,7 +25,8 @@ jobs:
           postgresql version: '11'  # See https://hub.docker.com/_/postgres for available versions
           postgresql db: 'contrato' 
           postgresql user: 'postgres'
-          postgresql password: 'admin'      
+          postgresql password: 'admin'   
+          
       - name: Permissão para executar o gradlew
         run: chmod +x ./gradlew
       - name: Build with Gradle
