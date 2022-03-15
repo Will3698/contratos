@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
+use Dompdf\Dompdf;
 
 class ContratoController extends BaseController
 {
@@ -216,5 +217,17 @@ class ContratoController extends BaseController
         }
 
         return view('contrato_vence_view', $arr);
+    }
+
+    public function pdf_contrato(){
+      
+        require_once 'dompdf/autoload.php';
+
+        $dompdf = new Dompdf();
+
+        $dompdf->load_html('
+            <h1>Teste</h1>  
+        ');
+
     }
 }

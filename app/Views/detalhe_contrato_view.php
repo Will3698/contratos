@@ -193,6 +193,7 @@
                         <div class="btn-toolbar pull-center">
                             <div class="col-sm-5">                                
                                 <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/buscar_contrato") ?>">Voltar</a>
+                                <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/pdf_contrato/{$inf['id']}") ?>">Imprimir</a>
 
                                 <?php if ($inf['op_pag'] == null) { ?>
                                     <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/editar_contrato/?id={$inf["id"]}") ?>">Editar</a>
