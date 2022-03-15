@@ -22,11 +22,9 @@ jobs:
           postgresql version: '11'  # See https://hub.docker.com/_/postgres for available versions
           postgresql db: 'contrato' 
           postgresql user: 'postgres'
-          postgresql password: '12345'  
-      - name: Look for gradlew
-        run: find / -type f -name "gradlew" 2>/dev/null
+          postgresql password: '12345'
       - name: Permissão para executar o gradlew
-        run: chmod +x ./gradlew
+        run: chmod +x ./runner/work/contratos/contratos/contrato/gradlew
       - name: Build with Gradle
         run: ./gradlew build
      
