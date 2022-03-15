@@ -17,9 +17,7 @@ class PagamentoController extends BaseController
         $contratos = json_decode(curl_exec($ch), true);
         $post['id_contrato_pag'] = $contratos;
         $json = json_encode($post);        
-        //print_r($json);
-        //die();
-        //$json = json_encode($dados);       
+            
         $iniciar = curl_init('http://localhost:8080/api/pagamento/pagar');
         curl_setopt($iniciar, CURLOPT_CUSTOMREQUEST, 'POST');
         curl_setopt($iniciar, CURLOPT_POSTFIELDS, $json);

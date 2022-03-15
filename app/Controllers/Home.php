@@ -8,20 +8,47 @@ class Home extends BaseController
 {
     public function index()
     {
-        //$arr['arr'] = null;
+        return view("login_view");
+    }
+
+    public function pagina_inicial()
+    {
+        $url = "C:/Users/rafae/Desktop/usuario.json";
+        $arr = json_decode(file_get_contents($url), true);
+
+        $post = $this->request->getPost(null);
+
+        for ($i = 0; $i < count($arr); $i++) {
+            if ($arr[0]['email'] === $post['email'] && $arr[0]['senha'] === $post['senha']) {
+                $url = "http://localhost:8080/api/pagamento";
+                $arr['list'] = json_decode(file_get_contents($url), true);
+
+                //$pag = $arr['list']->paginate(3);
+                //print_r($pag);
+                //die();
+                return view('pagina_inicial_view', $arr);
+                break;
+            } else {
+                return view("login_view");
+            }
+        }
+    }
+
+    public function home()
+    {
         $url = "http://localhost:8080/api/pagamento";
         $arr['list'] = json_decode(file_get_contents($url), true);
-        //print_r($arr['list'][0]['id_contrato_pag']['nome']);
-        //die();
         return view('pagina_inicial_view', $arr);
-    }   
+    }
 
-    public function getDados(){
+
+
+    public function getDados()
+    {
         $url = "http://localhost:8080/api/contrato/pago";
         $arr = json_decode(file_get_contents($url), true);
 
-        //print($arr);
-        //die();
+
         $cols = [];
         $rows = [];
         $dados = [];
@@ -37,11 +64,11 @@ class Home extends BaseController
                 'id' => '',
                 'label' => 'Valor Pago',
                 'pattern' => '',
-                'type' => 'number'   
+                'type' => 'number'
             ]
         ];
 
-        foreach($arr as $arr){
+        foreach ($arr as $arr) {
             $rows[] = [
                 'c' => [
                     [
@@ -62,6 +89,12 @@ class Home extends BaseController
         ];
 
         //echo '<pre>';
-        print json_encode($dados);        
+        print json_encode($dados);
+    }
+
+    public function logout()
+    {
+        session_destroy();
+        return redirect()->to(site_url("home/index"));
     }
 }
