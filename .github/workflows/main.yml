@@ -24,7 +24,7 @@ jobs:
           postgresql user: 'postgres'
           postgresql password: '12345'
       - name: Permissão para executar o gradlew
-        run: chmod +x ./gradlew
+        run: chmod +x ./contrato/gradlew
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./contrato/gradlew build
      
