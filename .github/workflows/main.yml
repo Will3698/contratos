@@ -24,7 +24,7 @@ jobs:
           postgresql user: 'postgres'
           postgresql password: '12345'  
       - name: Permissão para executar o gradlew
-        run: chmod +x ./usr/local/lib/android/sdk/extras/google/google_play_services/samples/unified/ActivityDemo/gradlew
+        run: chmod +x ./usr/local/lib/gradlew
       - name: Build with Gradle
         run: ./gradlew build
      
