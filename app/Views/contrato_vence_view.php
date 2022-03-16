@@ -25,7 +25,7 @@
             <div class="sidebar-heading border-bottom bg-light"><b>CONTRATOS</b></div>
             <div class="list-group list-group-flush">
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="<?= site_url("contratocontroller/cadastrar_contrato") ?>">Cadastrar</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="<?= site_url("contratocontroller/buscar_contrato") ?>">Buscars</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="<?= site_url("contratocontroller/buscar_contrato") ?>">Buscar</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="<?= site_url("contratocontroller/vence_contrato") ?>">Próximo do Vencimento</a>
             </div>
         </div>

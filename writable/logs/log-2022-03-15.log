@@ -123,3 +123,75 @@ CRITICAL - 2022-03-15 13:48:13 --> file_get_contents(http://localhost:8080/api/p
 #4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #6 {main}
+CRITICAL - 2022-03-15 14:34:19 --> require_once(dompdf/autoload.php): Failed to open stream: No such file or directory
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(do...', 'C:\\xampp2\\htdoc...', 224)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(224): require_once()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->pdf_contrato('19')
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-15 14:34:57 --> require_once(public/dompdf/autoload.php): Failed to open stream: No such file or directory
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(pu...', 'C:\\xampp2\\htdoc...', 224)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(224): require_once()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->pdf_contrato('19')
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-15 14:35:18 --> require_once(../dompdf/autoload.php): Failed to open stream: No such file or directory
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(.....', 'C:\\xampp2\\htdoc...', 224)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(224): require_once()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->pdf_contrato('19')
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-15 14:35:22 --> require_once(../dompdf/autoload.php): Failed to open stream: No such file or directory
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(.....', 'C:\\xampp2\\htdoc...', 224)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(224): require_once()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->pdf_contrato('19')
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-15 14:37:35 --> require_once(dompdf/autoload.php): Failed to open stream: No such file or directory
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(do...', 'C:\\xampp2\\htdoc...', 224)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(224): require_once()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->pdf_contrato('19')
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-15 14:39:03 --> require_once(dompdf/autoload.php): Failed to open stream: No such file or directory
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(do...', 'C:\\xampp2\\htdoc...', 224)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(224): require_once()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->pdf_contrato('19')
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-15 14:40:14 --> require_once(dompdf/autoload.inc.php): Failed to open stream: No such file or directory
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(do...', 'C:\\xampp2\\htdoc...', 224)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(224): require_once()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->pdf_contrato('19')
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-15 15:20:13 --> mb_convert_encoding(): Argument #3 ($from_encoding) contains invalid encoding "<label>Código do Contrato: </label>12121212"
+#0 C:\xampp2\htdocs\contratos\public\dompdf\src\Dompdf.php(471): mb_convert_encoding('\r\n            <...', 'UTF-8', '<label>C\xC3\xB3digo ...')
+#1 C:\xampp2\htdocs\contratos\public\dompdf\src\Dompdf.php(430): Dompdf\Dompdf->loadHtml('\r\n            <...', '<label>C\xC3\xB3digo ...')
+#2 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(237): Dompdf\Dompdf->load_html('\r\n            <...', '<label>C\xC3\xB3digo ...')
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->pdf_contrato('19')
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-03-15 15:31:04 --> Undefined array key "cod_contrato"
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(239): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp2\\htdoc...', 239)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->pdf_contrato('19')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

@@ -201,17 +201,17 @@ class ContratoController extends BaseController
         $op = (int) $val['dias'];
         //print_r($op);
         //die();
-        if($op == 15){
+        if ($op == 15) {
             $url = "http://localhost:8080/api/contrato/vencer15";
             $arr['list'] = json_decode(file_get_contents($url), true);
         }
 
-        if($op == 30){
+        if ($op == 30) {
             $url = "http://localhost:8080/api/contrato/vencer30";
             $arr['list'] = json_decode(file_get_contents($url), true);
         }
 
-        if($op == 90){
+        if ($op == 90) {
             $url = "http://localhost:8080/api/contrato/vencer90";
             $arr['list'] = json_decode(file_get_contents($url), true);
         }
@@ -219,15 +219,49 @@ class ContratoController extends BaseController
         return view('contrato_vence_view', $arr);
     }
 
-    public function pdf_contrato(){
-      
-        require_once 'dompdf/autoload.php';
+    public function pdf_contrato($id)
+    {
+        //$var = $_GET['id'];
+        $url = "http://localhost:8080/api/contrato/$id";
+        $arr = json_decode(file_get_contents($url), true);
+
+        require_once 'dompdf/autoload.inc.php';
+
+        $inf = $this->request->getPost(null);
+
 
         $dompdf = new Dompdf();
 
-        $dompdf->load_html('
-            <h1>Teste</h1>  
-        ');
+        $dompdf->load_html(
+            '<h1>CONTRATO</h1><br>            
+                <label><b>Cod. Contrato: </b></label>' . $arr['cod_contrato'] . '<br><br>                
+                <label><b>Nome/Razão Social: </b></label>' . $arr['nome'] . '<br><br> 
+                <label><b>CNPJ: </b></label>' . $arr['cnpj'] . '<br><br> 
+                <label><b>Responsável: </b></label>' . $arr['responsavel'] . '<br><br> 
+                <label><b>Tipo de Serviço: </b></label>' . $arr['tipo_servico'] . '<br><br>                 
+                <label><b>Situação: </b></label>' . $arr['situacao'] . '<br><br>
+                <label><b>SLA: </b></label>' . $arr['sla'] . '<br><br>
+                <label><b>Tipo de Contrato: </b></label>' . $arr['tipo_contrato'] . '<br><br> 
+                <label><b>Data da Assinatura: </b></label>' . date("d-m-Y", strtotime($arr['data_assinatura'])) . '<br><br>
+                <label><b>Data de Cadastro: </b></label>' . date("d-m-Y", strtotime($arr['data_cadastro'])) . '<br><br>
+                <label><b>Dia de Venc. da Fatura: </b></label>' . $arr['data_venc_fatura'] . '<br><br>
+                <label><b>Prazo Inicial: </b></label>' . date("d-m-Y", strtotime($arr['prazo_inicial'])) . '<br><br>
+                <label><b>Prazo Final: </b></label>' . date("d-m-Y", strtotime($arr['prazo_final'])) . '<br><br>
+                <label><b>Prazo de Garantia: </b></label>' . $arr['prazo_garantia'] . ' <span>Meses</span><br><br>
+                <label><b>Multa Por Atraso: </b></label>' . $arr['multa'] . ' <span>%</span><br><br>
+                <label><b>Valor da Fatura Mensal: </b><span>R$ </span></label>' . $arr['valor_fatura'] . '<br><br>
+                <label><b>Valor Total do Contrato: </b><span>R$ </span></label>' . $arr['valor_total'] . '<br><br>
+                <label><b>Status: </b></label>' . $arr['status'] . '<br><br>
+                <label><b>Observações: <b></label>' . $arr['obs'] . '<br><br>'
+            );
 
+        $dompdf->render();
+
+        $dompdf->stream(
+            "Contrato'.pdf",
+            array(
+                "Attachment" => false
+            )
+        );
     }
 }
