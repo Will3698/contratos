@@ -13,6 +13,7 @@ import java.util.List;
 @Controller
 @ResponseBody
 @RequestMapping(path = "/api")
+@CrossOrigin(originPatterns = "http://localhost:8080", allowCredentials = "true")
 public class ContratoController {
     @Autowired
     ContratoService contratoService;

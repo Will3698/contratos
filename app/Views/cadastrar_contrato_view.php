@@ -15,6 +15,13 @@
     <script src="<?= base_url("js/jquery-3.6.0.min.js") ?>"></script>
 	<script src="<?= base_url("js/jquery.mask.min.js") ?>"></script>
 	<script src="<?= base_url("js/main.js") ?>"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#cnpj').mask('00.000.000/0000-00', {reverse: true, placeholder: '__.___.___/___-00'}});
+            $('#dinheiro').mask('000.000.000.000.000,00' , { reverse : true);
+        }
+    </script>
 </head>
 
 <body>
@@ -181,7 +188,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="colFormLabel" class="col-sm-3 col-form-label">Valor da Fatura Mensal</label>
+                        <label for="colFormLabel" class="col-sm-3 col-form-label" id= "dinheiro">Valor da Fatura Mensal</label>
                         <div class="col-sm-5">
                             <div class="input-group mb-3">
                                 <span class="input-group-text">R$</span>                                

@@ -2,7 +2,7 @@ FROM openjdk:11
 
 COPY . .
 
-RUN .\gradlew clean build
+#RUN .\gradlew clean build
 
 WORKDIR /build/libs/
 
