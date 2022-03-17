@@ -24,8 +24,6 @@ jobs:
           postgresql user: 'postgres'
           postgresql password: '12345'
           
-      - name: Look for gradlew
-        run: find / -type f -name "gradlew"
       - name: Permissão para executar o gradlew
         run: chmod +x gradlew
       - name: Build with Gradle
