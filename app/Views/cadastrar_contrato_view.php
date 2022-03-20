@@ -16,12 +16,7 @@
 	<script src="<?= base_url("js/jquery.mask.min.js") ?>"></script>
 	<script src="<?= base_url("js/main.js") ?>"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('#cnpj').mask('00.000.000/0000-00', {reverse: true, placeholder: '__.___.___/___-00'}});
-            $('#dinheiro').mask('000.000.000.000.000,00' , { reverse : true);
-        }
-    </script>
+    
 </head>
 
 <body>
