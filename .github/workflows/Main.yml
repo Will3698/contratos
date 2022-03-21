@@ -25,9 +25,9 @@ jobs:
           postgresql user: 'postgres'
           postgresql password: 'admin'
       - name: Permissão para executar o gradlew
-        run: sudo chmod +x ./gradlew
+        run: chmod +x ./contrato/gradlew
       - name: Build with Gradle
-        run: sudo./gradlew build
+        run: ./contrato/gradlew build
       - name: Deploy no Heroku
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
