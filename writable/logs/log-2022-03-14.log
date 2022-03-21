@@ -1,0 +1,490 @@
+CRITICAL - 2022-03-14 07:16:42 --> syntax error, unexpected variable "$inf"
+#0 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('busca_contrato_...', Array, true)
+#2 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(121): view('busca_contrato_...', Array)
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_contrato()
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-03-14 07:32:40 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp2\htdocs\contratos\app\Views\contrato_vence_view.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 88)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(191): view('contrato_vence_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vence_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 07:36:51 --> Array to string conversion
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(191): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp2\\htdoc...', 191)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vence_contrato()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-14 07:39:24 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp2\htdocs\contratos\app\Views\contrato_vence_view.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 88)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(191): view('contrato_vence_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vence_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 07:40:14 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp2\htdocs\contratos\app\Views\contrato_vence_view.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 88)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(191): view('contrato_vence_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vence_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 07:41:30 --> foreach() argument must be of type array|object, int given
+#0 C:\xampp2\htdocs\contratos\app\Views\contrato_vence_view.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 88)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(191): view('contrato_vence_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vence_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 07:41:34 --> foreach() argument must be of type array|object, int given
+#0 C:\xampp2\htdocs\contratos\app\Views\contrato_vence_view.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 88)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(191): view('contrato_vence_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vence_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 07:49:12 --> Undefined variable $list
+#0 C:\xampp2\htdocs\contratos\app\Views\contrato_vence_view.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp2\\htdoc...', 88)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(212): view('contrato_vence_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_vence_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 07:51:12 --> Undefined variable $arr
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp2\\htdoc...', 212)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_vence_contrato()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-14 07:51:50 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp2\htdocs\contratos\app\Views\contrato_vence_view.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 88)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(215): view('contrato_vence_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_vence_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 07:52:19 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp2\htdocs\contratos\app\Views\contrato_vence_view.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 88)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(215): view('contrato_vence_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_vence_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 07:53:07 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp2\htdocs\contratos\app\Views\contrato_vence_view.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 88)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(215): view('contrato_vence_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_vence_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 07:57:16 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp2\htdocs\contratos\app\Views\contrato_vence_view.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 88)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(215): view('contrato_vence_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_vence_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 07:58:38 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp2\htdocs\contratos\app\Views\contrato_vence_view.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 88)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(215): view('contrato_vence_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_vence_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 07:58:58 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp2\htdocs\contratos\app\Views\contrato_vence_view.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 88)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(215): view('contrato_vence_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_vence_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 07:59:07 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp2\htdocs\contratos\app\Views\contrato_vence_view.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 88)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(215): view('contrato_vence_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_vence_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 07:59:18 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp2\htdocs\contratos\app\Views\contrato_vence_view.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 88)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(215): view('contrato_vence_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_vence_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 08:00:44 --> Array to string conversion
+#0 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(200): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp2\\htdoc...', 200)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_vence_contrato()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-14 08:03:14 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp2\htdocs\contratos\app\Views\contrato_vence_view.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 88)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(217): view('contrato_vence_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_vence_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 12:36:13 --> file_get_contents(http://localhost:8080/api/pagamento): Failed to open stream: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 13)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(13): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-14 15:18:07 --> file_get_contents(http://localhost:8080/api/pagamento): Failed to open stream: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 13)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(13): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-14 15:18:07 --> file_get_contents(http://localhost:8080/api/pagamento): Failed to open stream: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 13)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(13): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-14 15:21:38 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp2\htdocs\contratos\app\Views\contrato_vence_view.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 88)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(218): view('contrato_vence_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_vence_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 16:47:19 --> Undefined property: Config\App::$indexPage
+#0 C:\xampp2\htdocs\contratos\system\Helpers\url_helper.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp2\\htdoc...', 51)
+#1 C:\xampp2\htdocs\contratos\system\Helpers\url_helper.php(87): _get_uri('home/index', Object(Config\App))
+#2 C:\xampp2\htdocs\contratos\app\Views\login_view.php(25): site_url('home/index')
+#3 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#4 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('login_view', Array, true)
+#6 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(10): view('login_view')
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->login('index.php', 'home', 'index')
+#8 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-03-14 16:47:28 --> Undefined property: Config\App::$indexPage
+#0 C:\xampp2\htdocs\contratos\system\Helpers\url_helper.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp2\\htdoc...', 51)
+#1 C:\xampp2\htdocs\contratos\system\Helpers\url_helper.php(87): _get_uri('home/index', Object(Config\App))
+#2 C:\xampp2\htdocs\contratos\app\Views\login_view.php(25): site_url('home/index')
+#3 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#4 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('login_view', Array, true)
+#6 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(10): view('login_view')
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->login()
+#8 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-03-14 17:14:46 --> Array to string conversion
+#0 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp2\\htdoc...', 18)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-14 17:27:58 --> file_get_contents(Users/rafae/Desktop/usuario.html): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 18)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(18): file_get_contents('Users/rafae/Des...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-14 17:30:31 --> file_get_contents(Users/rafae/Desktop/usuario.html): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 18)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(18): file_get_contents('Users/rafae/Des...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-14 17:32:59 --> file_get_contents(Users/rafae/Desktop/usuario.html): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 18)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(18): file_get_contents('Users/rafae/Des...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-14 17:33:26 --> file_get_contents(users/rafae/desktop/usuario.html): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 18)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(18): file_get_contents('users/rafae/des...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-14 21:28:46 --> file_get_contents(C:/Users/rafae/Desktop/usuario.jso): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 18)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(18): file_get_contents('C:/Users/rafae/...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-14 21:30:43 --> Undefined array key "email"
+#0 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp2\\htdoc...', 23)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-14 21:30:48 --> Undefined array key "email"
+#0 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp2\\htdoc...', 23)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-14 21:31:35 --> Array to string conversion
+#0 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp2\\htdoc...', 20)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-14 21:31:38 --> Array to string conversion
+#0 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp2\\htdoc...', 20)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-14 21:35:10 --> Undefined array key "email"
+#0 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp2\\htdoc...', 24)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-14 21:36:21 --> Undefined array key "email"
+#0 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp2\\htdoc...', 24)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-14 21:37:04 --> Undefined array key "email"
+#0 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp2\\htdoc...', 24)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-14 21:40:36 --> Undefined array key "email"
+#0 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp2\\htdoc...', 24)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-14 22:01:17 --> Call to a member function paginate() on array
+#0 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-14 22:02:13 --> Call to a member function pagnate() on array
+#0 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-14 22:02:27 --> Call to a member function paginate() on array
+#0 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-14 22:02:50 --> Call to a member function paginate() on array
+#0 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-14 22:07:47 --> Undefined variable $pager
+#0 C:\xampp2\htdocs\contratos\app\Views\busca_contrato_view.php(211): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp2\\htdoc...', 211)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('busca_contrato_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(121): view('busca_contrato_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 22:08:54 --> Undefined variable $pager
+#0 C:\xampp2\htdocs\contratos\app\Views\busca_contrato_view.php(211): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp2\\htdoc...', 211)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('busca_contrato_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(121): view('busca_contrato_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 22:09:16 --> Undefined variable $pager
+#0 C:\xampp2\htdocs\contratos\app\Views\busca_contrato_view.php(211): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp2\\htdoc...', 211)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('busca_contrato_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(121): view('busca_contrato_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 22:09:37 --> Undefined variable $pager
+#0 C:\xampp2\htdocs\contratos\app\Views\busca_contrato_view.php(211): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp2\\htdoc...', 211)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('busca_contrato_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(121): view('busca_contrato_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 22:10:25 --> Undefined variable $pager
+#0 C:\xampp2\htdocs\contratos\app\Views\busca_contrato_view.php(211): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp2\\htdoc...', 211)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('busca_contrato_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(121): view('busca_contrato_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 22:12:22 --> Undefined variable $pager
+#0 C:\xampp2\htdocs\contratos\app\Views\busca_contrato_view.php(211): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp2\\htdoc...', 211)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('busca_contrato_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(121): view('busca_contrato_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 22:12:27 --> Call to a member function paginate() on array
+#0 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-14 22:17:45 --> Undefined variable $pager
+#0 C:\xampp2\htdocs\contratos\app\Views\busca_contrato_view.php(211): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp2\\htdoc...', 211)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('busca_contrato_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(121): view('busca_contrato_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-14 22:19:35 --> Call to a member function paginate() on array
+#0 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-14 22:20:34 --> Call to a member function paginate() on array
+#0 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-14 22:25:46 --> Call to a member function paginate() on array
+#0 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-14 22:45:42 --> Call to a member function paginate() on array
+#0 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
