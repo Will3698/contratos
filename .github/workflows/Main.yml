@@ -15,7 +15,6 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-     
       - name: Configurando o banco de dados
         uses: harmon758/postgresql-action@v1
         with:
