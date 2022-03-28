@@ -19,13 +19,12 @@ class Home extends BaseController
         $post = $this->request->getPost(null);
 
         for ($i = 0; $i < count($arr); $i++) {
-            if ($arr[0]['email'] === $post['email'] && $arr[0]['senha'] === $post['senha']) {
-                $url = "http://localhost:8080/api/pagamento";
-                $arr['list'] = json_decode(file_get_contents($url), true);
-                    
-                //$pag = $arr['list']->paginate(3);
-                //print_r($pag);
-                //die();
+            if ($arr[0]['email'] === $post['email'] && $arr[0]['senha'] === $post['senha']) {                
+                $ch = curl_init("http://localhost:8080/api/pagamento");
+                curl_setopt($ch, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);                
+                $arr['list'] = json_decode(curl_exec($ch), true);
                 return view('pagina_inicial_view', $arr);
                 break;
             } else {
@@ -36,8 +35,11 @@ class Home extends BaseController
 
     public function home()
     {
-        $url = "http://localhost:8080/api/pagamento";
-        $arr['list'] = json_decode(file_get_contents($url), true);
+        $ch = curl_init("http://localhost:8080/api/pagamento");
+        curl_setopt($ch, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        $arr['list'] = json_decode(curl_exec($ch), true);
         return view('pagina_inicial_view', $arr);
     }
 
@@ -45,8 +47,11 @@ class Home extends BaseController
 
     public function getDados()
     {
-        $url = "http://localhost:8080/api/contrato/pago";
-        $arr = json_decode(file_get_contents($url), true);
+        $ch = curl_init("http://localhost:8080/api/contrato/pago");
+        curl_setopt($ch, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        $arr = json_decode(curl_exec($ch), true);
 
 
         $cols = [];
@@ -87,8 +92,6 @@ class Home extends BaseController
             'cols' => $cols,
             'rows' => $rows
         ];
-
-        //echo '<pre>';
         print json_encode($dados);
     }
 

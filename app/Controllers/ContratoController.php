@@ -7,6 +7,31 @@ use Dompdf\Dompdf;
 
 class ContratoController extends BaseController
 {
+    public function getToken()
+    {
+        $ch = curl_init('http://localhost:8080/api/contrato');
+        #para pegar o token ja tem que se autenticar
+        curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+        curl_setopt($ch, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+        #estava faltando
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+        // get headers too with this line
+        curl_setopt($ch, CURLOPT_HEADER, 1);
+        $result = curl_exec($ch);
+        print "***1***\r\n";
+        print_r($result); #aqui eu confirmei que esta autenticado, antes estava dando falha
+        // get cookie
+        // multi-cookie variant contributed by @Combuster in comments
+        preg_match_all('/^Set-Cookie:\s*([^;]*)/mi', $result, $matches);
+        $cookies = array();
+        foreach ($matches[1] as $item) {
+            parse_str($item, $cookie);
+            $cookies = array_merge($cookies, $cookie);
+        }
+        return $cookies; #retorna o cookie inteiro, pois vamos precisar
+    }
+
     public function cadastrar_contrato()
     {
         $arr['dados'] = null;
@@ -15,9 +40,12 @@ class ContratoController extends BaseController
 
     public function salvar()
     {
+        $cookies = $this->getToken();
+
+        $token = $cookies["XSRF-TOKEN"];
+        $jsession = $cookies["JSESSIONID"];
+
         $dados = $this->request->getPost(null);
-        //print_r($dados);
-        //die();
 
         if (_v($_FILES["anexo"], "name") != "") {
             $file = $this->request->getFile('anexo');
@@ -26,10 +54,13 @@ class ContratoController extends BaseController
             $dados['anexo'] = $path . $file->getName();
         }
 
-
         $json = json_encode($dados);
 
+        //print($json);
+        //die();
+
         $iniciar = curl_init('http://localhost:8080/api/contrato/salvar');
+        curl_setopt($iniciar, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
         curl_setopt($iniciar, CURLOPT_CUSTOMREQUEST, 'POST');
         curl_setopt($iniciar, CURLOPT_POSTFIELDS, $json);
         curl_setopt($iniciar, CURLOPT_RETURNTRANSFER, true);
@@ -37,42 +68,39 @@ class ContratoController extends BaseController
             $iniciar,
             CURLOPT_HTTPHEADER,
             array(
+                'Cookie: XSRF-TOKEN=$token; JSESSIONID=$jsession',
+                'X-XSRF-TOKEN: $token',
                 'Content-Type: application/json',
                 'Content-Length: ' . strlen($json)
             )
         );
         curl_exec($iniciar);
         curl_close($iniciar);
+        
 
-        return redirect()->to(site_url("contratocontroller/cadastrar_contrato"));
+        return redirect()->to(site_url("contratocontroller/buscar_contrato"));
     }
 
     public function detalhe_contrato()
     {
         $arr['dados'] = null;
-        $url = "http://localhost:8080/api/contrato";
-        $arr['cont'] = json_decode(file_get_contents($url), true);
-        /*for ($i = 0; $i < count($arr['cont']); $i++) {
-            if (date('d-m-y') > $arr['cont'][$i]['prazo_final']) {
-                $arr['cont'][$i]['status'] = 'Finalizado';              
-            }
-        }
+        $ch = curl_init("http://localhost:8080/api/contrato");
+        curl_setopt($ch, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        $arr['cont'] = json_decode(curl_exec($ch), true);
 
-        for ($i = 0; $i < count($arr['cont']); $i++) {
-            if ($arr['cont'][$i]['valor_total'] == 0) {
-                $arr['cont'][$i]['valor_total'] = $arr['cont'][$i]['valor_fatura'];
-                //print($arr['cont'][$i]['valor_total']);
-                //die();
-            }
-        }*/
         return view('detalhe_contrato_view', $arr);
     }
 
     public function editar_contrato()
     {
-        $url = "http://localhost:8080/api/contrato";
-        $arr['cont'] = json_decode(file_get_contents($url), true);
-
+        $ch = curl_init("http://localhost:8080/api/contrato");
+        curl_setopt($ch, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        $arr['cont'] = json_decode(curl_exec($ch), true);
+        
         //print_r($arr['cont']);
         //die();     
         return view('editar_contrato_view', $arr);
@@ -80,9 +108,15 @@ class ContratoController extends BaseController
 
     public function atualizar_contrato()
     {
+        $cookies = $this->getToken();
+
+        $token = $cookies["XSRF-TOKEN"];
+        $jsession = $cookies["JSESSIONID"];
+
         $dados = $this->request->getPost(null);
         $json = json_encode($dados);
         $iniciar = curl_init('http://localhost:8080/api/contrato/atualizar');
+        curl_setopt($iniciar, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
         curl_setopt($iniciar, CURLOPT_CUSTOMREQUEST, 'PUT');
         curl_setopt($iniciar, CURLOPT_POSTFIELDS, $json);
         curl_setopt($iniciar, CURLOPT_RETURNTRANSFER, true);
@@ -90,6 +124,8 @@ class ContratoController extends BaseController
             $iniciar,
             CURLOPT_HTTPHEADER,
             array(
+                'Cookie: XSRF-TOKEN=$token; JSESSIONID=$jsession',
+                'X-XSRF-TOKEN: $token',
                 'Content-Type: application/json',
                 'Content-Length: ' . strlen($json)
             )
@@ -102,11 +138,25 @@ class ContratoController extends BaseController
 
     public function apagar_contrato($id)
     {
+        $cookies = $this->getToken();
+
+        $token = $cookies["XSRF-TOKEN"];
+        $jsession = $cookies["JSESSIONID"];
+
         $dados = "http://localhost:8080/api/contrato/deleta/$id";
 
         $iniciar = curl_init($dados);
+        curl_setopt($iniciar, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
         curl_setopt($iniciar, CURLOPT_CUSTOMREQUEST, 'DELETE');
         curl_setopt($iniciar, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt(
+            $iniciar,
+            CURLOPT_HTTPHEADER,
+            array(
+                'Cookie: XSRF-TOKEN=$token; JSESSIONID=$jsession',
+                'X-XSRF-TOKEN: $token'                
+            )
+        );
         curl_exec($iniciar);
         curl_close($iniciar);
 
@@ -115,10 +165,13 @@ class ContratoController extends BaseController
 
     public function buscar_contrato()
     {
-        // $arr['listagem'] = null;
         $arr['dados'] = null;
-        $url = "http://localhost:8080/api/contrato";
-        $arr['list'] = json_decode(file_get_contents($url), true);
+        $ch = curl_init("http://localhost:8080/api/contrato");
+        curl_setopt($ch, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        $arr['list'] = json_decode(curl_exec($ch), true);
+        //$arr['list'] = json_decode(file_get_contents($url), true);
         return view('busca_contrato_view', $arr);
     }
 
@@ -253,7 +306,7 @@ class ContratoController extends BaseController
                 <label><b>Valor Total do Contrato: </b><span>R$ </span></label>' . $arr['valor_total'] . '<br><br>
                 <label><b>Status: </b></label>' . $arr['status'] . '<br><br>
                 <label><b>Observações: <b></label>' . $arr['obs'] . '<br><br>'
-            );
+        );
 
         $dompdf->render();
 

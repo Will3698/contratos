@@ -187,7 +187,7 @@
                         <div class="col-sm-5">
                             <div class="input-group mb-3">
                                 <span class="input-group-text">R$</span>                                
-                                <input type="number" class="form-control" id="moeda" placeholder="Valor da Fatura Mensal" name="valor_fatura" value="<?= _v($dados, "valor_fatura") ?>" required>
+                                <input type="number" class="form-control" id="dinheiro" placeholder="Valor da Fatura Mensal" name="valor_fatura" value="<?= _v($dados, "valor_fatura") ?>" required>
                             </div>
                         </div>
                     </div>                   
@@ -206,20 +206,19 @@
                         </div>
                     </div>
 
-                    <input type="hidden" name="status" value="Vigente">
-
-                    
+                    <input type="hidden" name="status" value="Vigente">                    
 
                     <div class="form-group row">
                         <div class="col">
-                            <button type="submit" class="btn btn-primary">Cadastar</button>
+                            <button type="submit" id="cadastro" class="btn btn-primary">Cadastar</button>
                         </div>
                     </div>
-                    <br>
+                    
                 </form>
             </div>
         </div>
     </div>
+    
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->

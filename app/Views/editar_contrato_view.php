@@ -197,7 +197,7 @@
                     <br>
                     <div class="btn-toolbar pull-center">
                         <div class="col-sm-5">
-                            <button type="submit" class="btn mr-4 btn-primary">Gravar</button>
+                            <button type="submit" id="gravar" class="btn mr-4 btn-primary">Gravar</button>
                             <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/buscar_contrato") ?>">Voltar</a>
                         </div>
                     </div>

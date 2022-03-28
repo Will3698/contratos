@@ -1,0 +1,338 @@
+CRITICAL - 2022-03-26 07:57:42 --> file_get_contents(http://localhost:8080/api/pagamento): Failed to open stream: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 24)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(24): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-26 08:00:12 --> file_get_contents(https://contratos-1.herokuapp.com/api/contrato): Failed to open stream: HTTP request failed! HTTP/1.1 401 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 121)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(121): file_get_contents('https://contrat...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_contrato()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-26 08:00:25 --> file_get_contents(https://contratos-1.herokuapp.com/api/contrato): Failed to open stream: HTTP request failed! HTTP/1.1 401 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 121)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(121): file_get_contents('https://contrat...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_contrato()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-26 08:58:29 --> file_get_contents(http://localhost:8080/api/pagamento): Failed to open stream: HTTP request failed! HTTP/1.1 401 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 40)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(40): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->home()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-26 08:58:48 --> file_get_contents(http://localhost:8080/api/pagamento): Failed to open stream: HTTP request failed! HTTP/1.1 401 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 24)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(24): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-26 09:00:09 --> file_get_contents(http://localhost:8080/api/pagamento): Failed to open stream: HTTP request failed! HTTP/1.1 401 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 24)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(24): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-26 09:33:40 --> file_get_contents(http://localhost:8080/api/pagamento): Failed to open stream: HTTP request failed! HTTP/1.1 401 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 24)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(24): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-26 09:50:13 --> Object of class CurlHandle could not be converted to string
+#0 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-26 09:58:04 --> Undefined variable $list
+#0 C:\xampp2\htdocs\contratos\app\Views\pagina_inicial_view.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp2\\htdoc...', 95)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('pagina_inicial_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(41): view('pagina_inicial_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-26 09:58:25 --> Undefined variable $list
+#0 C:\xampp2\htdocs\contratos\app\Views\pagina_inicial_view.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp2\\htdoc...', 95)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('pagina_inicial_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(41): view('pagina_inicial_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-26 09:58:34 --> Undefined variable $list
+#0 C:\xampp2\htdocs\contratos\app\Views\pagina_inicial_view.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp2\\htdoc...', 95)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('pagina_inicial_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(41): view('pagina_inicial_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-26 10:02:39 --> Undefined variable $list
+#0 C:\xampp2\htdocs\contratos\app\Views\pagina_inicial_view.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp2\\htdoc...', 95)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('pagina_inicial_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(45): view('pagina_inicial_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-26 10:08:48 --> file_get_contents(1): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 41)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(41): file_get_contents('1')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-26 10:10:12 --> file_get_contents(1): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 41)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(41): file_get_contents('1')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-26 10:13:16 --> foreach() argument must be of type array|object, bool given
+#0 C:\xampp2\htdocs\contratos\app\Views\pagina_inicial_view.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 95)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('pagina_inicial_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(46): view('pagina_inicial_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-26 10:15:53 --> foreach() argument must be of type array|object, bool given
+#0 C:\xampp2\htdocs\contratos\app\Views\pagina_inicial_view.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 95)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('pagina_inicial_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(49): view('pagina_inicial_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-26 10:17:57 --> file_get_contents(http://localhost:8080/api/pagamento): Failed to open stream: HTTP request failed! HTTP/1.1 401 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 24)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(24): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-26 10:21:31 --> file_get_contents(): Argument #1 ($filename) must be of type string, CurlHandle given
+#0 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(26): file_get_contents(Object(CurlHandle))
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-26 10:25:18 --> file_get_contents(): Argument #1 ($filename) must be of type string, CurlHandle given
+#0 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(26): file_get_contents(Object(CurlHandle))
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-26 10:33:52 --> Array to string conversion
+#0 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp2\\htdoc...', 32)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-26 10:34:15 --> Cannot use object of type stdClass as array
+#0 C:\xampp2\htdocs\contratos\system\View\View.php(210): include()
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('pagina_inicial_...', Array, true)
+#3 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(34): view('pagina_inicial_...', Array)
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-26 10:34:39 --> Undefined variable $list
+#0 C:\xampp2\htdocs\contratos\app\Views\pagina_inicial_view.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp2\\htdoc...', 95)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('pagina_inicial_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(34): view('pagina_inicial_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-26 10:40:00 --> Cannot use object of type stdClass as array
+#0 C:\xampp2\htdocs\contratos\system\View\View.php(210): include()
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('pagina_inicial_...', Array, true)
+#3 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(34): view('pagina_inicial_...', Array)
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-26 10:41:08 --> file_get_contents(http://localhost:8080/api/contrato/pago): Failed to open stream: HTTP request failed! HTTP/1.1 401 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 54)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(54): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->getDados()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-26 10:41:14 --> file_get_contents(http://localhost:8080/api/contrato): Failed to open stream: HTTP request failed! HTTP/1.1 401 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 121)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(121): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_contrato()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-26 10:41:28 --> file_get_contents(http://localhost:8080/api/contrato/pago): Failed to open stream: HTTP request failed! HTTP/1.1 401 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 54)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(54): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->getDados()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-26 10:43:59 --> file_get_contents(): Argument #1 ($filename) must be of type string, CurlHandle given
+#0 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(57): file_get_contents(Object(CurlHandle))
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->getDados()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-26 10:44:02 --> file_get_contents(http://localhost:8080/api/pagamento): Failed to open stream: HTTP request failed! HTTP/1.1 401 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 45)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(45): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->home()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-26 10:44:13 --> file_get_contents(): Argument #1 ($filename) must be of type string, CurlHandle given
+#0 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(57): file_get_contents(Object(CurlHandle))
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->getDados()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-26 10:52:19 --> file_get_contents(http://localhost:8080/api/contrato): Failed to open stream: HTTP request failed! HTTP/1.1 401 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 65)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(65): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->editar_contrato()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-26 10:52:34 --> file_get_contents(http://localhost:8080/api/contrato/cnpj/12): Failed to open stream: HTTP request failed! HTTP/1.1 401 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 146)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(146): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-26 10:52:41 --> file_get_contents(http://localhost:8080/api/pagamento): Failed to open stream: HTTP request failed! HTTP/1.1 401 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 45)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(45): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->home()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-26 10:54:20 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 83)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->getDados()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-26 10:54:25 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 83)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->getDados()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-26 11:32:37 --> Array to string conversion
+#0 C:\xampp2\htdocs\contratos\app\Controllers\PagamentoController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp2\\htdoc...', 51)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\PagamentoController->pagamento_contrato()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PagamentoController))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-26 11:51:15 --> Array to string conversion
+#0 C:\xampp2\htdocs\contratos\app\Controllers\PagamentoController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp2\\htdoc...', 51)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\PagamentoController->pagamento_contrato()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PagamentoController))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-26 12:10:59 --> file_get_contents(http://localhost:8080/api/contrato/59): Failed to open stream: HTTP request failed! HTTP/1.1 401 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 278)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(278): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->pdf_contrato('59')
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-26 12:26:25 --> Object of class CurlHandle could not be converted to string
+#0 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\PagamentoController->pagamento_contrato()
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PagamentoController))
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-26 13:08:21 --> Array to string conversion
+#0 C:\xampp2\htdocs\contratos\app\Controllers\PagamentoController.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp2\\htdoc...', 52)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\PagamentoController->pagamento_contrato()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PagamentoController))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
