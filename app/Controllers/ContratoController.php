@@ -9,10 +9,10 @@ class ContratoController extends BaseController
 {
     public function getToken()
     {
-        $ch = curl_init('http://localhost:8080/api/contrato');
+        $ch = curl_init('https://contratos-1.herokuapp.com/contrato');
         #para pegar o token ja tem que se autenticar
         curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
-        curl_setopt($ch, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+        curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
         #estava faltando
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
@@ -59,8 +59,8 @@ class ContratoController extends BaseController
         //print($json);
         //die();
 
-        $iniciar = curl_init('http://localhost:8080/api/contrato/salvar');
-        curl_setopt($iniciar, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+        $iniciar = curl_init('https://contratos-1.herokuapp.com/contrato/salvar');
+        curl_setopt($iniciar, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
         curl_setopt($iniciar, CURLOPT_CUSTOMREQUEST, 'POST');
         curl_setopt($iniciar, CURLOPT_POSTFIELDS, $json);
         curl_setopt($iniciar, CURLOPT_RETURNTRANSFER, true);
@@ -84,8 +84,8 @@ class ContratoController extends BaseController
     public function detalhe_contrato()
     {
         $arr['dados'] = null;
-        $ch = curl_init("http://localhost:8080/api/contrato");
-        curl_setopt($ch, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+        $ch = curl_init("https://contratos-1.herokuapp.com/api/contrato");
+        curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $arr['cont'] = json_decode(curl_exec($ch), true);
@@ -95,8 +95,8 @@ class ContratoController extends BaseController
 
     public function editar_contrato()
     {
-        $ch = curl_init("http://localhost:8080/api/contrato");
-        curl_setopt($ch, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+        $ch = curl_init("https://contratos-1.herokuapp.com/api/contrato");
+        curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $arr['cont'] = json_decode(curl_exec($ch), true);
@@ -115,8 +115,8 @@ class ContratoController extends BaseController
 
         $dados = $this->request->getPost(null);
         $json = json_encode($dados);
-        $iniciar = curl_init('http://localhost:8080/api/contrato/atualizar');
-        curl_setopt($iniciar, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+        $iniciar = curl_init('https://contratos-1.herokuapp.com/contrato/atualizar');
+        curl_setopt($iniciar, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
         curl_setopt($iniciar, CURLOPT_CUSTOMREQUEST, 'PUT');
         curl_setopt($iniciar, CURLOPT_POSTFIELDS, $json);
         curl_setopt($iniciar, CURLOPT_RETURNTRANSFER, true);
@@ -143,10 +143,9 @@ class ContratoController extends BaseController
         $token = $cookies["XSRF-TOKEN"];
         $jsession = $cookies["JSESSIONID"];
 
-        $dados = "http://localhost:8080/api/contrato/deleta/$id";
-
+        $dados = "https://contratos-1.herokuapp.com/contrato/deleta/$id";
         $iniciar = curl_init($dados);
-        curl_setopt($iniciar, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+        curl_setopt($iniciar, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
         curl_setopt($iniciar, CURLOPT_CUSTOMREQUEST, 'DELETE');
         curl_setopt($iniciar, CURLOPT_RETURNTRANSFER, true);
         curl_setopt(
@@ -166,8 +165,8 @@ class ContratoController extends BaseController
     public function buscar_contrato()
     {
         $arr['dados'] = null;
-        $ch = curl_init("http://localhost:8080/api/contrato");
-        curl_setopt($ch, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+        $ch = curl_init("https://contratos-1.herokuapp.com/api/contrato");
+        curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $arr['list'] = json_decode(curl_exec($ch), true);

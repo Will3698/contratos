@@ -8,10 +8,10 @@ class PagamentoController extends BaseController
 {
     public function getToken()
     {
-        $ch = curl_init('http://localhost:8080/api/contrato');
+        $ch = curl_init('https://contratos-1.herokuapp.com/api/contrato');
         #para pegar o token ja tem que se autenticar
         curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
-        curl_setopt($ch, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+        curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
         #estava faltando
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
@@ -32,14 +32,13 @@ class PagamentoController extends BaseController
     }
 
     public function pagamento_contrato()
-    {   
-        
+    {    
              
         $dados = $this->request->getPost(null);       
         $idContrato = (int) $dados['id_contrato_pag'];
-        $url = "http://localhost:8080/api/contrato/{$idContrato}";
+        $url = "https://contratos-1.herokuapp.com/contrato/{$idContrato}";
         $ch = curl_init($url);
-        curl_setopt($ch, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+        curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);        
         $contratos = json_decode(curl_exec($ch), true);
@@ -54,8 +53,8 @@ class PagamentoController extends BaseController
         $token = $cookies["XSRF-TOKEN"];
         $jsession = $cookies["JSESSIONID"];
 
-        $iniciar = curl_init('http://localhost:8080/api/pagamento/pagar');
-        curl_setopt($iniciar, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+        $iniciar = curl_init('https://contratos-1.herokuapp.com/pagamento/pagar');
+        curl_setopt($iniciar, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
         curl_setopt($iniciar, CURLOPT_CUSTOMREQUEST, 'POST');
         curl_setopt($iniciar, CURLOPT_POSTFIELDS, $json);
         curl_setopt($iniciar, CURLOPT_RETURNTRANSFER, true);

@@ -21,8 +21,8 @@ class Home extends BaseController
 
         for ($i = 0; $i < count($arr); $i++) {
             if ($arr[0]['email'] === $post['email'] && $arr[0]['senha'] === $post['senha']) {                
-                $ch = curl_init("http://localhost:8080/api/pagamento");
-                curl_setopt($ch, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+                $ch = curl_init("https://contratos-1.herokuapp.com/api/pagamento");
+                curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);                
                 $arr['list'] = json_decode(curl_exec($ch), true);
@@ -36,8 +36,8 @@ class Home extends BaseController
 
     public function home()
     {
-        $ch = curl_init("http://localhost:8080/api/pagamento");
-        curl_setopt($ch, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+        $ch = curl_init("https://contratos-1.herokuapp.com/api/pagamento");
+        curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $arr['list'] = json_decode(curl_exec($ch), true);
@@ -48,8 +48,8 @@ class Home extends BaseController
 
     public function getDados()
     {
-        $ch = curl_init("http://localhost:8080/api/contrato/pago");
-        curl_setopt($ch, CURLOPT_USERPWD, "Administrador" . ":" . "12345");
+        $ch = curl_init("https://contratos-1.herokuapp.com/api/contrato/pago");
+        curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $arr = json_decode(curl_exec($ch), true);
