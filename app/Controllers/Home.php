@@ -14,6 +14,7 @@ class Home extends BaseController
     public function pagina_inicial()
     {
         $url = "C:/Users/rafae/Desktop/usuario.json";
+        
         $arr = json_decode(file_get_contents($url), true);
 
         $post = $this->request->getPost(null);

@@ -1,0 +1,18 @@
+CRITICAL - 2022-03-21 07:10:14 --> file_get_contents(http://localhost:8080/api/pagamento): failed to open stream: HTTP request failed! HTTP/1.1 401 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\contratos\app\Controllers\Home.php(24): file_get_contents('http://localhos...')
+#2 C:\xampp\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#3 C:\xampp\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-21 13:58:15 --> file_get_contents(http://localhost:8080/api/pagamento): failed to open stream: HTTP request failed! HTTP/1.1 401 
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\contratos\app\Controllers\Home.php(24): file_get_contents('http://localhos...')
+#2 C:\xampp\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#3 C:\xampp\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
