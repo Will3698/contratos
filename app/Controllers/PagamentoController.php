@@ -8,27 +8,21 @@ class PagamentoController extends BaseController
 {
     public function getToken()
     {
-        $ch = curl_init('https://contratos-1.herokuapp.com/api/contrato');
-        #para pegar o token ja tem que se autenticar
+        $ch = curl_init('https://contratos-1.herokuapp.com/api/contrato');        
         curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
-        curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
-        #estava faltando
+        curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");        
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
-        // get headers too with this line
         curl_setopt($ch, CURLOPT_HEADER, 1);
         $result = curl_exec($ch);
         print "***1***\r\n";
-        print_r($result); #aqui eu confirmei que esta autenticado, antes estava dando falha
-        // get cookie
-        // multi-cookie variant contributed by @Combuster in comments
+        print_r($result); 
         preg_match_all('/^Set-Cookie:\s*([^;]*)/mi', $result, $matches);
         $cookies = array();
         foreach ($matches[1] as $item) {
             parse_str($item, $cookie);
             $cookies = array_merge($cookies, $cookie);
         }
-        return $cookies; #retorna o cookie inteiro, pois vamos precisar
+        return $cookies;
     }
 
     public function pagamento_contrato()
@@ -36,7 +30,7 @@ class PagamentoController extends BaseController
              
         $dados = $this->request->getPost(null);       
         $idContrato = (int) $dados['id_contrato_pag'];
-        $url = "https://contratos-1.herokuapp.com/contrato/{$idContrato}";
+        $url = "https://contratos-1.herokuapp.com/api/contrato/{$idContrato}";
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -45,15 +39,13 @@ class PagamentoController extends BaseController
         $post['id_contrato_pag'] = $contratos;
         $json = json_encode($post);        
         curl_close($ch);
-        //print($json);
-        //die();
-        
+                
         $cookies = $this->getToken();
 
         $token = $cookies["XSRF-TOKEN"];
         $jsession = $cookies["JSESSIONID"];
 
-        $iniciar = curl_init('https://contratos-1.herokuapp.com/pagamento/pagar');
+        $iniciar = curl_init('https://contratos-1.herokuapp.com/api/pagamento/pagar');
         curl_setopt($iniciar, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
         curl_setopt($iniciar, CURLOPT_CUSTOMREQUEST, 'POST');
         curl_setopt($iniciar, CURLOPT_POSTFIELDS, $json);

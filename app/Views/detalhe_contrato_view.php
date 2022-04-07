@@ -197,7 +197,7 @@
 
                                 <?php if ($inf['op_pag'] == null) { ?>
                                     <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/editar_contrato/?id={$inf["id"]}") ?>">Editar</a>
-                                    <a class="btn mr-4 btn-primary" href="<?= site_url("contratocontroller/apagar_contrato/{$inf['id']}") ?>">Apagar</a><br>
+                                    <a class="btn mr-4 btn-primary" id="apagar" href="<?= site_url("contratocontroller/apagar_contrato/{$inf['id']}") ?>">Apagar</a><br>
                                     <br>
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         Pagamento

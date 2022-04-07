@@ -1,0 +1,135 @@
+CRITICAL - 2022-03-29 05:54:36 --> file_get_contents(http://localhost:8080/api/contrato/vencer15): Failed to open stream: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 244)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(244): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vence_contrato()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-29 06:04:17 --> Cannot access offset of type string on string
+#0 C:\xampp2\htdocs\contratos\system\View\View.php(210): include()
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#3 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(249): view('contrato_vence_...', Array)
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vence_contrato()
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-29 06:07:55 --> Cannot access offset of type string on string
+#0 C:\xampp2\htdocs\contratos\system\View\View.php(210): include()
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#3 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(249): view('contrato_vence_...', Array)
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vence_contrato()
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-29 06:08:06 --> Cannot access offset of type string on string
+#0 C:\xampp2\htdocs\contratos\system\View\View.php(210): include()
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#3 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(249): view('contrato_vence_...', Array)
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vence_contrato()
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-29 06:09:10 --> Cannot access offset of type string on string
+#0 C:\xampp2\htdocs\contratos\system\View\View.php(210): include()
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#3 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(249): view('contrato_vence_...', Array)
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vence_contrato()
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-29 06:12:12 --> Cannot access offset of type string on string
+#0 C:\xampp2\htdocs\contratos\system\View\View.php(210): include()
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#3 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(249): view('contrato_vence_...', Array)
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vence_contrato()
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-29 06:12:45 --> Cannot access offset of type string on string
+#0 C:\xampp2\htdocs\contratos\system\View\View.php(210): include()
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#3 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(249): view('contrato_vence_...', Array)
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vence_contrato()
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-29 06:15:11 --> Cannot access offset of type string on string
+#0 C:\xampp2\htdocs\contratos\system\View\View.php(210): include()
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#3 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(249): view('contrato_vence_...', Array)
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vence_contrato()
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-29 06:15:43 --> Cannot access offset of type string on string
+#0 C:\xampp2\htdocs\contratos\system\View\View.php(210): include()
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#3 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(249): view('contrato_vence_...', Array)
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vence_contrato()
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-29 07:39:06 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp2\htdocs\contratos\app\Views\busca_contrato_view.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 194)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('busca_contrato_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(174): view('busca_contrato_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar_contrato()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-29 07:39:21 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp2\htdocs\contratos\app\Views\pagina_inicial_view.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp2\\htdoc...', 95)
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(210): include('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('pagina_inicial_...', Array, true)
+#4 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(29): view('pagina_inicial_...', Array)
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-29 07:42:45 --> Undefined array key "email"
+#0 C:\xampp2\htdocs\contratos\app\Controllers\Home.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp2\\htdoc...', 23)
+#1 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\Home->pagina_inicial()
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-29 08:05:59 --> Cannot access offset of type string on string
+#0 C:\xampp2\htdocs\contratos\system\View\View.php(210): include()
+#1 C:\xampp2\htdocs\contratos\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp2\htdocs\contratos\system\Common.php(1089): CodeIgniter\View\View->render('contrato_vence_...', Array, true)
+#3 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(249): view('contrato_vence_...', Array)
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->vence_contrato()
+#5 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#6 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-29 08:33:22 --> file_get_contents(http://localhost:8080/api/contrato/cnpj/1): Failed to open stream: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp2\\htdoc...', 209)
+#1 C:\xampp2\htdocs\contratos\app\Controllers\ContratoController.php(209): file_get_contents('http://localhos...')
+#2 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(825): App\Controllers\ContratoController->buscar()
+#3 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContratoController))
+#4 C:\xampp2\htdocs\contratos\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp2\htdocs\contratos\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}

@@ -9,27 +9,21 @@ class ContratoController extends BaseController
 {
     public function getToken()
     {
-        $ch = curl_init('https://contratos-1.herokuapp.com/contrato');
-        #para pegar o token ja tem que se autenticar
+        $ch = curl_init('https://contratos-1.herokuapp.com/contrato');        
         curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
-        curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
-        #estava faltando
+        curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");        
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
-        // get headers too with this line
         curl_setopt($ch, CURLOPT_HEADER, 1);
         $result = curl_exec($ch);
         print "***1***\r\n";
-        print_r($result); #aqui eu confirmei que esta autenticado, antes estava dando falha
-        // get cookie
-        // multi-cookie variant contributed by @Combuster in comments
+        print_r($result); 
         preg_match_all('/^Set-Cookie:\s*([^;]*)/mi', $result, $matches);
         $cookies = array();
         foreach ($matches[1] as $item) {
             parse_str($item, $cookie);
             $cookies = array_merge($cookies, $cookie);
         }
-        return $cookies; #retorna o cookie inteiro, pois vamos precisar
+        return $cookies;
     }
 
     public function cadastrar_contrato()
@@ -56,10 +50,7 @@ class ContratoController extends BaseController
 
         $json = json_encode($dados);
 
-        //print($json);
-        //die();
-
-        $iniciar = curl_init('https://contratos-1.herokuapp.com/contrato/salvar');
+        $iniciar = curl_init('https://contratos-1.herokuapp.com/api/contrato/salvar');
         curl_setopt($iniciar, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
         curl_setopt($iniciar, CURLOPT_CUSTOMREQUEST, 'POST');
         curl_setopt($iniciar, CURLOPT_POSTFIELDS, $json);
@@ -76,7 +67,6 @@ class ContratoController extends BaseController
         );
         curl_exec($iniciar);
         curl_close($iniciar);
-        
 
         return redirect()->to(site_url("contratocontroller/buscar_contrato"));
     }
@@ -100,9 +90,6 @@ class ContratoController extends BaseController
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $arr['cont'] = json_decode(curl_exec($ch), true);
-        
-        //print_r($arr['cont']);
-        //die();     
         return view('editar_contrato_view', $arr);
     }
 
@@ -115,7 +102,7 @@ class ContratoController extends BaseController
 
         $dados = $this->request->getPost(null);
         $json = json_encode($dados);
-        $iniciar = curl_init('https://contratos-1.herokuapp.com/contrato/atualizar');
+        $iniciar = curl_init('https://contratos-1.herokuapp.com/api/contrato/atualizar');
         curl_setopt($iniciar, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
         curl_setopt($iniciar, CURLOPT_CUSTOMREQUEST, 'PUT');
         curl_setopt($iniciar, CURLOPT_POSTFIELDS, $json);
@@ -143,7 +130,7 @@ class ContratoController extends BaseController
         $token = $cookies["XSRF-TOKEN"];
         $jsession = $cookies["JSESSIONID"];
 
-        $dados = "https://contratos-1.herokuapp.com/contrato/deleta/$id";
+        $dados = "https://contratos-1.herokuapp.com/api/contrato/deleta/$id";
         $iniciar = curl_init($dados);
         curl_setopt($iniciar, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
         curl_setopt($iniciar, CURLOPT_CUSTOMREQUEST, 'DELETE');
@@ -153,7 +140,7 @@ class ContratoController extends BaseController
             CURLOPT_HTTPHEADER,
             array(
                 'Cookie: XSRF-TOKEN=$token; JSESSIONID=$jsession',
-                'X-XSRF-TOKEN: $token'                
+                'X-XSRF-TOKEN: $token'
             )
         );
         curl_exec($iniciar);
@@ -170,7 +157,6 @@ class ContratoController extends BaseController
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $arr['list'] = json_decode(curl_exec($ch), true);
-        //$arr['list'] = json_decode(file_get_contents($url), true);
         return view('busca_contrato_view', $arr);
     }
 
@@ -183,8 +169,13 @@ class ContratoController extends BaseController
         for ($i = 0; $i < count($arr['inf']); $i++) {
             if ($arr['inf']['cod_contrato'] != null) {
                 $cod = $arr['inf']['cod_contrato'];
-                $url = "http://localhost:8080/api/contrato/codContrato/$cod";
-                $arr['list'] = json_decode(file_get_contents($url), true);
+                
+                $ch = curl_init("https://contratos-1.herokuapp.com/api/contrato/codContrato/$cod");
+                curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                $arr['list'] = json_decode(curl_exec($ch), true);
+                
                 return view('busca_contrato_view', $arr);
             }
             if ($arr['inf']['nome'] != null) {
@@ -200,8 +191,11 @@ class ContratoController extends BaseController
             }
             if ($arr['inf']['cnpj'] != null) {
                 $cnpj = $arr['inf']['cnpj'];
-                $url = "http://localhost:8080/api/contrato/cnpj/$cnpj";
-                $arr['list'] = json_decode(file_get_contents($url), true);
+                $ch = curl_init("https://contratos-1.herokuapp.com/api/contrato/cnpj/$cnpj");
+                curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                $arr['list'] = json_decode(curl_exec($ch), true);
                 return view('busca_contrato_view', $arr);
             }
             if ($arr['inf']['responsavel'] != null) {
@@ -240,8 +234,11 @@ class ContratoController extends BaseController
 
     public function vence_contrato()
     {
-        $url = "http://localhost:8080/api/contrato/vencer15";
-        $arr['list'] = json_decode(file_get_contents($url), true);
+        $ch = curl_init("https://contratos-1.herokuapp.com/api/contrato/vencer15");
+        curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        $arr['list'] = json_decode(curl_exec($ch), true);
 
         return view('contrato_vence_view', $arr);
     }
@@ -250,37 +247,45 @@ class ContratoController extends BaseController
     {
         $arr['list'] = null;
         $val = $this->request->getPost(null);
-        $op = (int) $val['dias'];
-        //print_r($op);
-        //die();
+        $op = (int) $val['dias'];        
         if ($op == 15) {
-            $url = "http://localhost:8080/api/contrato/vencer15";
-            $arr['list'] = json_decode(file_get_contents($url), true);
+            $ch = curl_init("https://contratos-1.herokuapp.com/api/contrato/vencer15");
+            curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            $arr['list'] = json_decode(curl_exec($ch), true);
         }
 
         if ($op == 30) {
-            $url = "http://localhost:8080/api/contrato/vencer30";
-            $arr['list'] = json_decode(file_get_contents($url), true);
+            $ch = curl_init("https://contratos-1.herokuapp.com/api/contrato/vencer30");
+            curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            $arr['list'] = json_decode(curl_exec($ch), true);
         }
 
         if ($op == 90) {
-            $url = "http://localhost:8080/api/contrato/vencer90";
-            $arr['list'] = json_decode(file_get_contents($url), true);
+            $ch = curl_init("https://contratos-1.herokuapp.com/api/contrato/vencer90");
+            curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            $arr['list'] = json_decode(curl_exec($ch), true);
         }
 
         return view('contrato_vence_view', $arr);
     }
 
     public function pdf_contrato($id)
-    {
-        //$var = $_GET['id'];
-        $url = "http://localhost:8080/api/contrato/$id";
-        $arr = json_decode(file_get_contents($url), true);
+    {        
+        $ch = curl_init("https://contratos-1.herokuapp.com/api/contrato/$id");
+        curl_setopt($ch, CURLOPT_USERPWD, "Adiministrador" . ":" . "admin");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        $arr = json_decode(curl_exec($ch), true);
 
         require_once 'dompdf/autoload.inc.php';
 
         $inf = $this->request->getPost(null);
-
 
         $dompdf = new Dompdf();
 

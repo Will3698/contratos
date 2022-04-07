@@ -77,7 +77,7 @@
                             </tr>
                         </thead>
                         <?php foreach ($list as $inf) : ?>
-                            <?php if ($inf["op_pag"] == null) { ?>
+                            <?php if (($inf["op_pag"]) == null) { ?>
                                 <tbody>
                                     <tr>
                                         <td><?php print $inf["cod_contrato"] ?></td>

@@ -50,7 +50,7 @@
                 <div class="form-group row">
                     <label for="colFormLabel" class="col-sm-3 col-form-label">Buscar de Contrato Por:</label>
                     <div class="col-sm-5">
-                        <select class="custom-select my-1 mr-sm-2" id="mySelect">
+                        <select class="custom-select my-1 mr-sm-2" id="mySelect" name="buscar">
                             <option selected>Escolher...</option>
                             <option>Cod. Contrato</option>
                             <option>Nome/Razão Social</option>
@@ -172,7 +172,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col">
-                                    <button type="submit" class="btn btn-primary">Buscar</button>
+                                    <button type="submit" class="btn btn-primary" id="btn-submit">Buscar</button>
                                 </div>
                             </div>
                         </form>
@@ -203,7 +203,7 @@
                                     <?php } else { ?>
                                         <td><?php print "<b><span style='color:red;'>Pendente</span></b>"; ?></td>
                                     <?php } ?>                                    
-                                    <td><a class="btn btn-outline-primary" href="<?= site_url("contratocontroller/detalhe_contrato/?id={$inf["id"]}") ?>">Visualizar</a></td>
+                                    <td><a class="btn btn-outline-primary" id="visualizar" href="<?= site_url("contratocontroller/detalhe_contrato/?id={$inf["id"]}") ?>">Visualizar</a></td>
                                 </tr>
                             </tbody>
                         <?php endforeach; ?>
